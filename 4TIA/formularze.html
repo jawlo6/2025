@@ -1,4 +1,5 @@
 <h1>Formularze</h1>
+<h2>developer.mozilla.org</h2>
 
 <form>
     <label for="nazwa">Opis pola</label>
@@ -35,7 +36,55 @@
         name="horns" />
     <label for="horns">Horns</label>
   </div>
+   <h2>Termin wycieczki</h2>
+    <input
+        type="date"
+        id="start"
+        name="trip-start"
+        value="2018-07-22"
+        min="2025-01-01"
+        max="2025-12-31" />
+
+    <h3>Wybierz obrazek</h3>
+    <input 
+           type="file" 
+           id="avatar" 
+           name="avatar" 
+           accept="image/png, image/jpeg" />
+
+    <h2>Radio button</h2>
+     <input 
+            type="radio" 
+            name="drone" 
+            value="huey" checked />
+        <label for="huey">Huey</label>
+
+    <input 
+           type="radio" 
+           name="drone" 
+           value="dewey" />
+        <label for="dewey">Dewey</label>
     
-    
-    
+    <h2>Zakres</h2>
+    <input 
+           type="range" 
+           name="volume" 
+           min="0" 
+           max="11" />
+        <label for="volume">Volume (0-10)</label>
+    <h2>Kolor</h2>
+    <input
+        type="color"
+        name="background"
+        value="#ff0000"
+        alpha />
+    <label for="background">Background color</label>
+    <br><br>
+    <input type="submit" value="Send Request" />
+    <input type="reset" value="Reset" />
+    <h2>Przycisk</h2>
+    <input 
+           type="button" 
+           value="Add to favorites" />
+
 </form>

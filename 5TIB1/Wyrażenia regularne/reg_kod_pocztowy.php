@@ -1,6 +1,6 @@
 <p>Wyszukiwanie kodu pocztowego</p>
 
-<?php    //wyszukiwanie kodu pocztowego
+<?php    
 $wzorzec = '/\d{2}-\d{3}/';
 $tekst = "poczta 34-200 Sucha Beskidzka";
 //$matches jest tablicą przechowującą znalezione dopasowania

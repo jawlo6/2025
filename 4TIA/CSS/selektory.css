@@ -6,3 +6,30 @@ p {
 #niebieski{
    color: blue;
 }
+
+/* selektor klasy   */
+.center{
+   text-align: center;
+}
+
+/* selektor uniwersalny   */
+
+* {
+  text-align: center;
+}
+
+/* selektor grupujący  */
+h2, h3, p {
+   background-color: yellow;
+}
+
+/* selektor potomka  "spacja"- akapity w divie  */
+div p {
+   color: green;
+}
+
+
+
+
+
+

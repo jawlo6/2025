@@ -1,0 +1,1 @@
+Napisz funkcję która wygeneruje tabelę HTML o rozmiarach podanych jako parametry 

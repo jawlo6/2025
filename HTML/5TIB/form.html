@@ -1,0 +1,85 @@
+<h2>Formularze</h2>
+<h3>developer.mozilla.org</h3>
+<form action="zapisz.php" method="post">
+    <label for="fname" required> First name</label><br>
+    <input type="text" name="fname" id="fname"> 
+
+    <br>
+    <label>Wiek
+       <input 
+           type="number" 
+           name="age" 
+           min="1"
+           max="120"
+           id="age">
+    </label><br>
+<bR>
+       
+       <label for="data_ur">Data urodzenia</label><br>
+    <input 
+           type="date" 
+           name="data_ur" 
+           id="data_ur"/> 
+<br>
+    <label for="kolor">Kolor</label><br>
+    <input 
+           type="color" 
+           name="kolor" 
+           id="kolor" 
+           value="#ff0000"/> 
+<br>
+    
+    <input 
+           type="button" 
+           value="opis przycisku"/> 
+<br>
+    
+    
+    <p>checkbox</p>
+    <input 
+           type="checkbox" 
+           name="scales" 
+           checked />
+    <label for="scales">Scales</label>
+    <br><br>
+    
+    
+
+
+        
+      <br><br>
+    <h2>Wariant - radio</h2>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <br>
+        
+        <input type="submit" value="Wyślij">
+        
+        <input type="reset" value="wyczyść">  
+        
+         <button type="button" onclick="alert('Hello World!')">Click Me!</button> 
+        
+    <br>
+    <label for="avatar">
+        Choose a profile picture:
+    </label>
+
+    <input 
+           type="file" 
+           id="avatar" 
+           name="avatar" 
+           accept="image/png, image/jpeg" />
+    
+    <br>
+    <label for="pass">Password (8 characters minimum):</label>
+    <input 
+           type="password" 
+           id="pass" 
+           name="password" 
+           minlength="8" 
+           required />
+    <br>
+    
+</form>

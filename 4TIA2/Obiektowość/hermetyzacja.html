@@ -1,0 +1,23 @@
+<script>
+class SimpleClass {
+    #privateNumber = 102; //prywatne musimy przed konstruktorem
+    publicNumber = null; 
+
+    constructor(nr) {
+        this.publicNumber = nr;
+        this.#privateNumber = 102;
+    }
+    publicMethod() { //to ma być publiczne
+        console.log(this.publicNumber);
+    }
+    #privateMethod() {
+        console.log(this.#privateNumber);
+    }
+}
+const my = new SimpleClass(10);
+
+my.publicNumber = 103;
+my.publicMethod = "xxx";
+//my.#privateMethod(); //błąd
+my.#privateNumber = "ala ma kota"; //błąd
+</script>

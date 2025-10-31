@@ -1,0 +1,16 @@
+<script>
+    let task=[
+    ":active", ":autofill", ":checked", ":disabled", ":enabled", ":first", ":first-child", ":first-of-type", ":focus", ":hover", ":last", ":nth-child()", ":visited"];
+    let toDo=[];
+    let min=0;
+    let max=14;
+    let start=14;
+    for( var i=1; i<start; i++){
+        let number=Math.floor( Math.random()*max);
+        toDo.push( task.splice( number-1, 1 ) );
+        console.log( number);
+        max--;
+        document.write(  i+ " - " + toDo[i-1] +"<br>");
+    }
+    console.log( toDo );
+</script>

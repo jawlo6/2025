@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kombinacje selektorów</title>
+    <style>
+        /* unvisited link */
+	   a:link{
+		  color: #FF0000;
+	   }
+        /* visited link  */
+        a:visited{
+		  color: #00FF00;
+	   }
+        /* mouse over link */
+	   a:hover{
+		  color: #0000FF;
+	   }
+
+p {
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+
+div:hover p {
+  display: block;
+}
+        
+        h1:first-child{
+            color: red;
+	   }
+
+input:focus {
+  background-color: yellow;
+}
+		
+		
+    </style>
+</head>
+<body>
+    <a href="https://zsgsucha.pl">1. zsgsucha.pl</a><br>
+    <a href="https://zsgsucha.pl">2. zsgsucha.pl</a>
+    <div>Hover over this div element to show the p element
+        <p>to jest akapit</p>
+    </div>
+    <p>drugi akapit</p>
+    <h1>pierwszy nagłówek</h1>
+    <h1>drugi nagłówek</h1>
+    
+<form action="/action_page.php" method="get">
+  First name: <input type="text" name="fname"><br><br>
+  Last name: <input type="text" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

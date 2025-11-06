@@ -1,0 +1,49 @@
+<style>
+    div,p{border: 1px solid black; padding: 10px; margin: 10px;}
+</style>
+<main>
+        <section id="chat">
+            <div class="message jolanta">
+                <img src="Jolka.jpg" alt="Jolanta Nowak">
+                <p>Cześć idziesz jutro do kina?</p>
+            </div>
+            <div class="message krzysztof">
+                <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+                <p>Tak! A ty?</p>
+            </div>
+        </section>
+        <section class="inputArea">
+            <form>
+                <label for="messageInput">Wpisz wiadomość:</label>
+                <input type="text" id="messageInput">
+                <button type="button" onclick="sendMessage()">Wyślij</button>
+                <br>
+                <button type="button" onclick="generateRandomReply()">Generuj losową odpowiedź</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        const replies = [
+            "Super pomysł!",
+            "Nie jestem pewna, czy dam radę.",
+            "O której godzinie się spotykamy?",
+            "Może pójdziemy na pizzę po kinie?",
+            "Który film chcesz obejrzeć?"
+        ];
+        function sendMessage() {
+            let input = document.querySelector("#messageInput").value;
+            let newmessage = document.createElement("div");
+            newmessage.classList.add("message", "krzysztof");
+            newmessage.innerHTML = `<img src="Krzysiek.jpg" 
+                                        alt="Krzysztof Łukasiński">
+                                    <p>${input}</p>`;
+            document.querySelector("#chat").appendChild(newmessage);
+            document.querySelector("#messageInput").value = "";
+        }
+
+        function generateRandomReply() {
+            let randomIndex = Math.floor(Math.random() * replies.length);
+           
+           
+        }
+    </script>

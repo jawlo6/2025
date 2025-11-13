@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Formatowanie tekstu w CSS</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+  }
+
+  .kolor {
+    color: red;
+  }
+
+  .wyrownanie {
+    text-align: center;
+  }
+
+  .vertical {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    border: 1px solid black;
+  }
+
+  .dekoracje {
+    text-decoration: underline overline wavy blue;
+  }
+
+  .transformacje {
+    text-transform: uppercase;
+  }
+
+  .odstepy {
+    word-spacing: 20px;
+    letter-spacing: 5px;
+    line-height: 2;
+  }
+
+  .cienie {
+    text-shadow: 3px 3px 5px gray;
+  }
+</style>
+</head>
+<body>
+
+<p class="kolor">Przykład 1 – kolor tekstu (color: red)</p>
+
+<p class="wyrownanie">Przykład 2 – wyrównanie tekstu (text-align: center)</p>
+
+<div class="vertical">Przykład 3 – wyrównanie pionowe (vertical-align / flex)</div>
+
+<p class="dekoracje">Przykład 4 – dekoracje tekstu (underline, overline, wavy)</p>
+
+<p class="transformacje">Przykład 5 – transformacje tekstu (uppercase)</p>
+
+<p class="odstepy">Przykład 6 – odstępy między literami i wyrazami</p>
+
+<p class="cienie">Przykład 7 – cień tekstu (text-shadow)</p>
+
+</body>
+</html>

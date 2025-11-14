@@ -1,0 +1,33 @@
+ Volume in drive E has no label.
+ Volume Serial Number is A806-9A59
+
+ Directory of E:\Szkola\2025\projekty\4TIA2\Tomczak
+
+14.11.2025  15:35    <DIR>          .
+14.11.2025  15:35    <DIR>          ..
+14.11.2025  15:35    <DIR>          Atrybuty
+14.11.2025  15:35    <DIR>          Chat
+14.11.2025  15:35    <DIR>          CreateElement
+14.11.2025  15:35    <DIR>          CwiczeniaAtrybuty
+14.11.2025  15:35    <DIR>          Daty
+14.11.2025  15:35    <DIR>          DOM
+14.11.2025  15:35    <DIR>          for
+14.11.2025  15:35    <DIR>          if
+14.11.2025  15:35    <DIR>          inkrementacja
+14.11.2025  15:35    <DIR>          kalkulator
+14.11.2025  15:35    <DIR>          lekcja
+14.11.2025  15:35    <DIR>          Lekcja 1
+14.11.2025  00:45             1ÿ064 LICENSE
+14.11.2025  15:35                 0 lista.txt
+14.11.2025  15:35    <DIR>          ObslugaZdarzen
+14.11.2025  15:35    <DIR>          OOP
+14.11.2025  15:35    <DIR>          OOP2
+14.11.2025  15:35    <DIR>          Parametry domy˜lne
+14.11.2025  00:45                30 README.md
+14.11.2025  15:35    <DIR>          Selektor
+14.11.2025  15:35    <DIR>          shift()
+14.11.2025  15:35    <DIR>          Style
+14.11.2025  15:35    <DIR>          StylePrzyklady
+14.11.2025  15:35    <DIR>          Tablice
+               3 File(s)          1ÿ094 bytes
+              23 Dir(s)  149ÿ671ÿ301ÿ120 bytes free

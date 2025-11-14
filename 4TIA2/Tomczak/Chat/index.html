@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+</head>
+<body>
+    <section id="chat">
+      <div class="message jolanta" alt="Jolanta Nowak">
+        <p>Cześć idziesz jutro do kina?</p>
+      </div>
+      <div class="message krzysztof" alt="Krzysztof Łukaski">
+        <p>Tak! a Ty?</p>
+      </div>
+    </section>
+    <section class="inputarea">
+    <form>
+        <label for="messageinput">Wpisz wiadomość</label>
+        <input type="text" id ="messageInput">
+        <button type="button" onclick="sendMessage()">Wyślij:</button>
+        <br>
+        <button type="button" onclick="generateRandomReply()">Generuj losową odpowiedź</button>
+    </form>
+    </section>
+<script src="main.js"></script>
+</body>
+</html>

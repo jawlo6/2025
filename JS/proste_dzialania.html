@@ -1,0 +1,44 @@
+<h1>PROSTE DZIA£ANIA</h1>
+
+<form name="formularz">
+    <i>Podaj pierwsz¹ liczbê: </i><input type="number" name="liczba1" id="liczba1"><br>
+    <i>Podaj drug¹ liczbê: <input type="number" name="liczba2" id="liczba2"></i><br>
+	<button  onClick="f(1)">DODAWANIE</button>
+	<button  onClick="f(2)" >ODEJMOWANIE</button>
+	<button  onClick="f(3)">MNO¯ENIE</button>
+	<button  onClick="f(4)">DZIELENIE</button>
+	<br />
+	<output id="wynik"></output>
+</form>
+<script>
+    function f(operacja){
+        let liczba1=parseInt(document.querySelector("#liczba1").value);
+        let liczba2=parseInt(document.querySelector("#liczba2").value);
+        console.log( liczba1, liczba2 );
+        if( isNaN(liczba1) || isNaN(liczba2) ){
+            wynik="Proszê uzupe³niæ obie liczby";
+        }else{
+            switch(operacja){
+                case 1:
+                    wynik=liczba1+liczba2; //dodawania
+                    break;
+                case 2:
+                    wynik=liczba1-liczba2; // odejmowanie
+                    break;
+                case 3:
+                    wynik=liczba1*liczba2; //mno¿enie   
+                    break;
+                case 4:
+                    if(liczba2==0){
+                        wynik="Nie dzielimy przez zero";
+                    }else{
+                        wynik=liczba1/liczba2;
+                    }
+            }        
+        }
+        let rezult=document.querySelector("#wynik");
+        
+        rezult.innerHTML=wynik;
+        console.log(wynik);
+    }
+</script>

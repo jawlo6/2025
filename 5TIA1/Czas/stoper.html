@@ -1,0 +1,28 @@
+<p id="stoperek">0:0:0</p><br>
+<button onclick="stoper()">Start</button>
+<button onclick="stop()">Stop</button>
+<script>
+function    stop(){
+    clearInterval(czas);
+    console.log(czas);
+}
+
+function stoper(){
+        var hours=0; var minutes=0; 
+        var seconds=0;
+        return czas=setInterval(  function(){
+            if( seconds==59){
+                if(minutes==59){  
+                    hours++;  minutes=0;
+                }else{ minutes++; }
+                seconds=0;
+            }else{  seconds++;   }                        
+            let czas=hours+":"+minutes+":"+seconds;
+            let place=document.querySelector("#stoperek");
+            place.innerHTML=czas;
+        }, 1000 );
+        console.log(czas);
+}
+
+
+</script>   

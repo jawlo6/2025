@@ -1,0 +1,82 @@
+<!DOCTYPE html5>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biuro turystyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h1>Zwiedzamy Polskę</h1>
+    </header>
+
+    <section>
+    <div id="lewy">
+        <button onclick="poprzednie()"><</button>
+    </div>
+
+    <div id="srodkowy">
+        <img src="1.jpg" alt="Aktywne zdjęcie">
+    </div>
+
+    <div id="prawy">
+        <button onclick="nastepne()">></button>
+    </div>
+    </section>
+
+    <div id="minatury">
+         <img src="1.jpg" alt="Gdańsk">
+         <img src="2.jpg" alt="Kraków">
+         <img src="3.jpg" alt="Niedzica">
+         <img src="4.jpg" alt="Pieniny">
+         <img src="5.jpg" alt="Szklarska Poręba">
+         <img src="6.jpg" alt="Tatry">
+         <img src="7.jpg" alt="Wrocław">
+    </div>
+
+    <footer>   
+        <h3>Autorem galerii jest:</h3>
+        <p>Michał Szarlej</p>
+        <a href="http://pixabay.com">Więcej zdjęć</a>
+    </footer>
+
+    <script>
+        let numerzdjecia = 1;        
+
+        function nastepne(){
+            if(numerzdjecia>=7){
+                numerzdjecia=1;
+                    let zdjęcie=document.querySelector("#srodkowy img")
+                    zdjęcie.removeAttribute("src")
+                    zdjęcie.setAttribute("src",`${numerzdjecia}.jpg`)
+
+            }else{
+
+            let zdjęcie=document.querySelector("#srodkowy img")
+            zdjęcie.removeAttribute("src")
+            numerzdjecia++;
+            zdjęcie.setAttribute("src",`${numerzdjecia}.jpg`)
+            }
+
+        }      
+        
+        function poprzednie(){
+            if(numerzdjecia<=1){
+                numerzdjecia=7;
+                    let zdjęcie=document.querySelector("#srodkowy img")
+                    zdjęcie.removeAttribute("src")
+                    zdjęcie.setAttribute("src",`${numerzdjecia}.jpg`)
+
+            }else{
+
+            let zdjęcie=document.querySelector("#srodkowy img")
+            zdjęcie.removeAttribute("src")
+            numerzdjecia--;
+            zdjęcie.setAttribute("src",`${numerzdjecia}.jpg`)
+            }
+
+        }
+    </script>
+</body>
+</html>

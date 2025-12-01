@@ -1,0 +1,13 @@
+<script>
+    document.querySelector("#test").addEventListener("mousemove", myFunction );
+
+
+    function myFunction(){
+        document.querySelector("#demo").innerHTML = Math.random();
+    }
+
+
+    function removeEvent(){
+        document.querySelector("#test").removeEventListener("mousemove", myFunction );
+    }
+</script>

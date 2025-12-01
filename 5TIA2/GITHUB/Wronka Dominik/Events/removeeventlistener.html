@@ -1,0 +1,13 @@
+
+  <button onclick="dodajAkapit()">Dodaj akapit</button>
+  <div></div>
+
+  <script>
+
+    function dodajAkapit(){
+        const kontener = document.querySelector("div");
+        const akapit = document.createElement("p");
+        akapit.textContent = "Dominik Wronka";
+        kontener.appendChild(akapit)
+    }
+  </script>

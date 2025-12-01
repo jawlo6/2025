@@ -1,0 +1,10 @@
+<html>
+    <button id="myButton">Wyświetl datę</button>
+    <p id="demo"></p>
+    <script>
+        document.querySelector("#myButton").onclick=displayDate;
+        function displayDate(){
+            document.querySelector("#demo").innerHTML=Date();
+        }
+    </script>
+</html>

@@ -1,0 +1,11 @@
+<script>
+    function sprawdzPole() {
+      const pole = document.getElementById("mojePole").value.trim();
+      if (pole === "") {
+        alert("Pole jest puste!");
+      }
+    }
+
+  </script>
+  <input type="text" id="mojePole" placeholder="Wpisz coś...">
+  <button onclick="sprawdzPole()">Sprawdź</button>

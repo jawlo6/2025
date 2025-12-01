@@ -1,0 +1,21 @@
+<style>
+    .red { color: red; }
+    .green { color: green; }
+</style>
+
+
+<p class="red">czerwony</p>
+
+
+<script>
+    let akapit = document.querySelector(".red");
+    akapit.setAttribute('class', 'green');
+</script><img src="obrazek.jpg">
+
+
+
+
+<script>
+    let img = document.querySelector('img');
+    img.setAttribute('src', 'obrazek2.jpg');
+</script>

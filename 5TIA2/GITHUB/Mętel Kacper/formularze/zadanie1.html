@@ -1,0 +1,15 @@
+<p>czy puste</p>
+
+<input type="text">
+<button onclick="Funkcja(value)">Przycisk</button>
+<p id="odpowiedz"></p>
+<script>
+    function Funkcja(liczba){
+        let wynik = document.querySelector("#odpowiedz");
+        if(liczba === "")
+            wynik.innerHTML += "Odpowiedz jest pusta <br>";
+        else
+            wynik.innerHTML += "W odpowiedzi jest liczba <br>";
+        console.log(1)
+    }
+</script>

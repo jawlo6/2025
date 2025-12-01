@@ -1,0 +1,13 @@
+<button id="myButton">Dodaj imię </button>
+<p id="demo"></p>
+
+<script>
+    let button=document.querySelector("#myButton");
+
+    button.addEventListener("click", mclick);
+
+    function mclick() {
+        let name = "Krzysiek"; 
+        document.querySelector("#demo").innerHTML += name + "<br>";
+    }
+</script>

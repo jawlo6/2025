@@ -1,0 +1,13 @@
+<p  style="color: blueviolet;">Zdarzenie onchange </p> 
+
+
+<p>Wpisz swoje imie</p>
+<input type="text" id="frame" onchange="myFunction()"><br>
+<input type="text">
+
+<script>
+    function myFunction(){
+        let x=document.querySelector("#fname");
+        x.value=x.value.toUpperCase();
+    }
+</script>

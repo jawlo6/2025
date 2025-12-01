@@ -1,0 +1,26 @@
+<h3>remove Event Listener()</h3>
+<div id="test">To jest Div
+    <p>Kliknij w przaycisk aby usunąć zdarzenie</p>
+    <button onclick="removeEvent()">usuń zdarzenie</button>
+</div>
+<p id="demo"></p>
+<style>
+    #test{
+        background-color: coral;
+        border: solid 1px;
+        padding: 50px;
+        color: white;
+    }
+</style>
+
+<script>
+    document.querySelector("#test").addEventListener("mousemove", myFunction);
+
+    function myFunction(){
+        document.querySelector("#demo").innerHTML = Math.random();
+    }
+
+    function removeEvent(){
+        document.querySelector("#test").removeEventListener("mousemove", myFunction);
+    }
+</script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Proste działania</title>
+</head>
+<body>
+
+<h1> Proste działania </h1>
+<div class="container">
+    <label>Podaj pierwszą liczbę:</label>
+    <input type="number" id="liczba1">
+    <label>Podaj drugą liczbę:</label>
+    <input type="number" id="liczba2">
+</div>
+<div>
+<button onclick="dodaj()">DODAWANIE</button>
+<button onclick="odejmij()">ODEJMOWANIE</button>
+<button onclick="pomnoz()">MNOŻENIE</button>
+<button onclick="podziel()">DZIELENIE</button>
+</div>
+<div id="wynik"></div>
+
+<script>
+
+function dodaj(){
+    const liczba1=document.getElementById('liczba1').valueAsNumber;
+    const liczba2=document.getElementById('liczba2').valueAsNumber;
+    const wynikdzialania=document.getElementById('wynik');
+
+         if (liczba1 === 0 || liczba2 === 0) {
+        wynikdzialania.textContent = "Prosze wpisać liczby";
+        return;
+    }
+    const wynik=liczba1+liczba2;
+    wynikdzialania.textContent='Wynik:' +wynik;
+   
+}
+
+function odejmij(){
+    const liczba1=document.getElementById('liczba1').valueAsNumber;
+    const liczba2=document.getElementById('liczba2').valueAsNumber;
+    const wynikdzialania=document.getElementById('wynik');
+    const wynik=liczba1-liczba2;
+    wynikdzialania.textContent='Wynik:' +wynik;
+}
+
+function pomnoz(){
+    const liczba1=document.getElementById('liczba1').valueAsNumber;
+    const liczba2=document.getElementById('liczba2').valueAsNumber;
+    const wynikdzialania=document.getElementById('wynik');
+    const wynik=liczba1*liczba2;
+    wynikdzialania.textContent='Wynik:' +wynik;
+}
+
+function podziel(){
+    const liczba1=document.getElementById('liczba1').valueAsNumber;
+    const liczba2=document.getElementById('liczba2').valueAsNumber;
+    const wynikdzialania=document.getElementById('wynik');
+    const wynik=liczba1/liczba2;
+    wynikdzialania.textContent='Wynik:' +wynik;
+}
+
+
+</script>
+
+</html>

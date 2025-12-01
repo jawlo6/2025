@@ -1,0 +1,11 @@
+1. SELECT nazwa, opis, cena FROM `nagrody`
+order by rand()
+limit 5;
+
+2. SELECT * FROM `nagrody`
+where cena BETWEEN '100' and '1000' and ilosc_sztuk = '2';
+
+3. DELETE from nagrody where cena ='0' or cena is null
+
+4. SELECT nazwa, cena, data_dodania from nagrody where data_dodania BETWEEN "2021-08-01" and "2021-08-31"
+order by data_dodania asc

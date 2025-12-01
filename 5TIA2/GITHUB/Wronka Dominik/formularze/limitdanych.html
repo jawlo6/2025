@@ -1,0 +1,14 @@
+<form name="myForm" onsubmit="return niePuste()">
+    <input type="text" name="fname" >
+    <input type="submit" value="Wyslij">
+</form>
+
+<script>
+    function niePuste() {
+        let formularz = document.forms['myForm']['fname'].value;
+        if (formularz == "" || formularz == null){
+        alert ("wypełnij formularz");
+        return false;
+        }
+    }
+</script>

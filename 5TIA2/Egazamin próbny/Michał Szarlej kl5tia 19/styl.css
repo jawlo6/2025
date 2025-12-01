@@ -1,0 +1,74 @@
+*{
+    font-family: georgia;
+    color: white;
+}
+
+header,footer{
+    background-color: maroon;
+    text-align: center;
+    padding:2px;
+}
+
+#lewy,#srodkowy,#prawy{
+    background-color: lightsalmon;
+    height: 527px;
+    float:left;
+}
+
+#lewy,#prawy{
+    width: 15%;
+}
+
+#srodkowy{
+    width: 70%;
+}
+
+#minatury{
+    background-color: maroon;
+    height: 70px;
+    clear: both;
+}
+
+button{
+    background-color: lightsalmon;
+    color: maroon;
+    border:none;
+    font-size: 400%;
+    display: block;
+    margin: auto;
+    padding-top: 210px;
+}
+
+
+#minatury img {
+    height: 70px;
+    animation-name: animacja;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+
+}
+
+@keyframes animacja {
+    from {padding-left: 50px;}
+    to {padding-left: 0px;}
+}
+
+#srodkowy img{
+    display: block;
+    margin: auto;
+    padding-top: 45px;   
+
+}
+
+#srodkowy img:hover{
+    animation-name:skalowanie;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    
+}
+
+@keyframes skalowanie{
+    from{transform: scale(1);}
+    to{transform: scale(1.2);}
+}
+

@@ -1,0 +1,12 @@
+<h1>wybieranie wartości liczbowej</h1>
+
+    <label>Ustaw wartośc liczbowa</label>
+    <input type="range" min="1" max="100" onchange="funkcja(value)">
+    <p id="wynik"></p>
+    <script>
+        let wynik = document.querySelector("#wynik");
+        function funkcja(liczba){
+            wynik.innerHTML = liczba;
+        }
+        
+    </script>

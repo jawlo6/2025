@@ -1,0 +1,20 @@
+<HTML>
+    <form>
+        <label>Ustaw kolor<br>0
+        <input type="range" min="0" max="255" id="zakres">255
+    </label>
+    </form><br>
+    <div>div</div>
+    <script>
+        let zakres=document.querySelector("#zakres");
+        zakres.addEventListener("change", wybierz);
+        let div=document.querySelector("div");
+
+
+        function wybierz(){
+            div.style.background=`rgb(${zakres.value}, 0,0)`;
+
+
+        }
+    </script>
+</HTML>

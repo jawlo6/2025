@@ -1,0 +1,13 @@
+<script>
+    function time(){
+        let now = new Date();
+        let hours = now.getHours().toString();
+        let minutes=now.getMinutes().toString();
+        let seconds = now.getSeconds().toString();
+        let godzina = hours + ":" + minutes + ":" + seconds;
+        let place = document.querySelector("#time");
+        place.innerHTML=godzina;
+    }
+    setInterval(time, 1000);
+</script>
+<p id="time"></p>

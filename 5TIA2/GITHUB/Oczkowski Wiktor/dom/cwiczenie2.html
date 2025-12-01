@@ -1,0 +1,17 @@
+<button onclick="dodajAkapit()">Kliknij, aby dodać akapit</button>
+
+<div id="kontener"></div>
+
+<script>
+    function dodajAkapit() {
+        const kontener = document.getElementById("kontener");
+
+       
+        if (kontener.querySelector("p")) return;
+
+        const imie = "Wiktor";
+        const p = document.createElement("p");
+        p.textContent = "Moje imię: " + imie;
+        kontener.appendChild(p);
+    }
+</script>

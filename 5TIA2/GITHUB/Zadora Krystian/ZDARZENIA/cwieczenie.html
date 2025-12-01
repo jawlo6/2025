@@ -1,0 +1,18 @@
+<html>
+    <button onclick id="myButton">Wypisz imie</button>
+    <p id="imie"></p>
+
+    <script>
+        let button=document.querySelector("#myButton");
+        button.addEventListener("click", mclick);
+      
+        function mclick(){
+            document.querySelector("#imie").innerHTML = "Krystian <br>";
+        }
+    </script>
+    <style>
+        #imie{
+            color: blue;
+        }
+    </style>
+</html>

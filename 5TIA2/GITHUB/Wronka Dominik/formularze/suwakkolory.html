@@ -1,0 +1,24 @@
+<form>
+    <label>Red: <input type="range" min="0" max="255" id="red"></label>
+    <label>Green: <input type="range" min="0" max="255" id="green"></label>
+    <label>Blue: <input type="range" min="0" max="255" id="blue"></label>
+</form>
+<div id="text"> Tekst </div>
+<script>
+  const red = document.getElementById('red');
+  const green = document.getElementById('green');
+  const blue = document.getElementById('blue');
+  const text = document.getElementById('text');
+
+function updateColor() {
+    const r = red.value;
+    const g = green.value;
+    const b = blue.value;
+    
+    text.style.color = `rgb(${r}, ${g}, ${b})`;
+}
+
+   red.addEventListener('input', updateColor);
+   blue.addEventListener('input', updateColor);
+   green.addEventListener('input', updateColor);
+</script>

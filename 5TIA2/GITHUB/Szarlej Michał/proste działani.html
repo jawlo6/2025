@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proste działania</title>
+</head>
+<body>
+<h2>PROSTE DZIAŁANIA</h2>
+<form>
+    <label>Podaj pierwszą liczbę: <input type="number" id="liczba1"></label>
+    <br>
+    <label>Podaj drugą liczbę: <input type="number" id="liczba2"></label>
+    <br>
+ 
+    <button type="button" onclick="dodawanie()">DODAWANIE</button>
+    <button type="button" onclick="odejmowanie()">ODEJMOWANIE</button>
+    <button type="button" onclick="mnożenie()">MNOŻENIE</button>
+    <button type="button" onclick="dzielenie()">DZIELENIE</button>
+</form>
+<p id="wynik"></p>
+
+<script>
+function dodawanie() {
+    const liczba1 = document.getElementById('liczba1').value;
+    const liczba2 = document.getElementById('liczba2').value;
+    const wynikdzialania = document.getElementById('wynik');
+
+    if (liczba1 === '' || liczba2 === '') {
+        wynikdzialania.textContent = 'Proszę uzupełnić obie liczby.';
+        return;
+    }
+
+    const a = liczba1;
+    const b = liczba2;
+    wynikdzialania.textContent = 'Wynik: ' + (a + b);
+}
+
+function odejmowanie() {
+    const liczba1 = document.getElementById('liczba1').value;
+    const liczba2 = document.getElementById('liczba2').value;
+    const wynikdzialania = document.getElementById('wynik');
+
+    if (liczba1 === '' || liczba2 === '') {
+        wynikdzialania.textContent = 'Proszę uzupełnić obie liczby.';
+        return;
+    }
+
+    const a = liczba1;
+    const b = liczba2;
+    wynikdzialania.textContent = 'Wynik: ' + (a - b);
+}
+
+function mnozenie() {
+    const liczba1 = document.getElementById('liczba1').value;
+    const liczba2 = document.getElementById('liczba2').value;
+    wynikdzialania = document.getElementById('wynik');
+
+    if (liczba1 === '' || liczba2 === '') {
+        wynikdzialania.textContent = 'Proszę uzupełnić obie liczby.';
+        return;
+    }
+
+    const a = liczba1;
+    const b = liczba2;
+    wynikdzialania.textContent = 'Wynik: ' + (a * b);
+}
+
+function dzielenie() {
+    const liczba1 = document.getElementById('liczba1').value;
+    const liczba2 = document.getElementById('liczba2').value;
+    const wynikdzialania = document.getElementById('wynik');
+
+    if (liczba1 === '' || liczba2 === '') {
+        wynikdzialania.textContent = 'Proszę uzupełnić obie liczby.';
+        return;
+    }
+
+    const a = liczba1;
+    const b = liczba2;
+
+    if (b === 0) {
+        wynikdzialania.textContent = 'Nie wolno dzielić przez zero.';
+        return;
+    }
+
+    wynikdzialania.textContent = 'Wynik: ' + (a / b);
+}
+</script>
+
+</body>
+</html>

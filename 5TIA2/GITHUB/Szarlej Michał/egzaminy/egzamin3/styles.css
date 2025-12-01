@@ -1,0 +1,66 @@
+*{
+    font-family: Roboto,Arial,sans-serif;
+    text-align: center;
+}
+
+body{
+    background-color: lightcyan;
+}
+
+header,footer{
+    background-color: steelblue;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    float: left;
+}
+
+
+
+article{
+    padding-top: 40px;
+    margin: 1%;
+    width: 30%;
+    float: left;
+}
+
+#pierwszy{
+    background-color: dodgerblue;
+}
+
+#drugi{
+    background-color: limegreen;
+}
+
+#trzeci{
+    background-color: darkorchid;
+}
+
+img{
+    width: 70%;
+}
+
+p{
+    padding:20px
+}
+
+table{
+margin-left: auto;
+margin-right: auto;
+width: 70%;
+border: 1px solid SteelBlue;
+}
+
+table tr:hover {
+    background-color: SteelBlue;  
+    color: white;
+}
+
+@media (max-width: 799px) {
+    
+    article { 
+        width: 100%;
+        float: none;
+    }
+    
+}

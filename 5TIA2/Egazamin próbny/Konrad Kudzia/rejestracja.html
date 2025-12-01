@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>Rejestracja</title>
+</head>
+<body>
+    <header>
+  <h1> Formularz rejestracyjny konferencji <em>Nasze kwiaty</em></h1>
+    </header>
+    <main>
+<form id="formularz1" class="blok">
+<h2>Dane osobowe</h2>
+<input type="text" id="imie" placeholder="Wpisz imie...">
+<input type="text" id="nazwisko" placeholder="Wpisz nazwisko...">
+<button onclick="drugastrona()" id="btn1">Następna karta</button>
+</form>
+<form id="formularz2" class="blok ukryty">
+<h2> Dane kontaktowe</h2>
+<input type="email" id="email" placeholder="Twój e-mail...">
+<input type="number" id="telefon" placeholder="Wpisz numer telefonu...">
+<button onclick="trzeciastrona()" id="btn2">Następna karta</button>
+</form>
+<form id="formularz3" class="blok ukryty">
+<h2>Hasło do logowania</h2>
+<input type="password" id="haslo" placeholder="Podaj hasło...">
+<input type="password" id="haslo2" placeholder="Powtórz hasło...">
+<button onclick="zatwierdz()" id="btn3">Zatwierdź</button>
+</form>
+    </main>
+    <footer>
+       <section>
+        <video controls
+        src="motyl.mp4" alt="Przeglądarka nie obsługuje tego formatu"></video>
+       </section>
+       <section>
+        <h3>Plan konferencji</h3>
+        <table>
+            <tr>
+                <td>9:00 - 12:00</td>
+                <td>Pielęgnacja roślin</td>
+            </tr>
+            <tr>
+                <td>13:00 - 15:00</td>
+                <td>Targi Kwiatowe</td>
+            </tr>
+        </table>
+       </section>
+       <section>
+        <p> <a href="https://kwiaty.pl/">Internetowa Kwiaciarna</a>
+       </section>
+       <section>
+        <p> Formularz wykonał: Konrad Kudzia</p>
+       </section>
+    </footer>
+    <script>
+        }
+
+
+
+
+    function zatwierdz(){
+        const imie = document.getElementById("imie").value
+        const nazwisko = document.getElementById("nazwisko").value
+        const haslo = document.getElementById("haslo").value
+        const haslo2 = document.getElementById("haslo2").value
+        const email = document.getElementById("email").value
+        const numer = document.getElementById("telefon").value
+        if (haslo !== haslo2) {
+            alert('Podane hasła różnią się')
+        }
+        console.log("witaj" + imie + "" + nazwisko)
+    };
+    
+    </script>
+</body>
+</html>

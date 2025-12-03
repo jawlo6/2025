@@ -1,0 +1,33 @@
+<script>
+    let task=[   
+"inf_03_5.06.25",
+"inf_03_2.06.25",
+"inf_03_6.01.25",
+"inf_03_12.06.24",
+"inf_03_10.06.24",
+"inf_03_8.06.24",
+"inf_03_9.06.24",
+"inf_03_6.06.24",
+"inf_03_2.06.24",
+"inf_03_2.01.24",
+"ee_09_3.01.23",
+"ee_09_2.01.23",
+"ee_09_4.06.22",
+"ee_09_2.06.22"
+    ];
+    let toDo=[];
+    let min=0;
+    let max=13;
+    let end=14;
+    document.write("Egzamin INF.03<br>");
+    for( var i=1; i<=end; i++){
+        let number=Math.floor( Math.random()*max);
+        toDo.push( task.splice( number-1, 1 ) );
+        max--;
+        document.write(  (i)+ " - " + toDo[i-1] +"<br>");
+    }
+    console.log( toDo );
+</script>
+
+
+

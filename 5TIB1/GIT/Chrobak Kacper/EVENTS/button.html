@@ -1,0 +1,8 @@
+<button id="myButton">Wyswiel date</button>
+<p id="demo"></p>
+<script>
+    document.querySelector("#myButton").onlick=DisplayDate();
+    function DisplayDate(){
+        document.querySelector("#demo").innerHTML=Date();
+    }
+</script>

@@ -1,0 +1,22 @@
+<div id="div1">
+    <p id="p1">To jest pierwszy akapit</p>
+    <p id="p2">To jest drugi akapit</p>
+</div>
+
+<script>
+    // 1. Tworzymy nowy element (akapit)
+    let akapit = document.createElement("p");
+    
+    // 2. Tworzymy treść tekstową (alternatywa dla textContent)
+    let content = document.createTextNode("Nowy akapit");
+    
+    // 3. Wkładamy tekst do akapitu
+    akapit.appendChild(content);
+    
+    // 4. Pobieramy rodzica (kontener) i dziecko (element do usunięcia)
+    let parent = document.querySelector( "#div1" );
+    let child = document.querySelector( "#p1" );
+    
+    // 5. WYKONUJEMY ZAMIANĘ: (nowy, stary)
+    parent.replaceChild( akapit, child );
+</script>

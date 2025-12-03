@@ -1,0 +1,19 @@
+<form name="myForm" >
+Podaj pierwsza liczbe: <input type="number" name="fname"><br>
+Podaj druga liczbe: <input type="number" name="sname"><br>
+<input type="button" value="dodawanie">
+<input type="button" value="odejmowanie">
+<input type="button" value="mnozenie">
+<input type="button" value="dzielenie">
+</form>
+
+
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>

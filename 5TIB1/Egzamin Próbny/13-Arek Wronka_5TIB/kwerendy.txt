@@ -1,0 +1,9 @@
+kw1 - SELECT nazwa, pasmo FROM `szczyty` WHERE szczyty.wysokosc > 1500; 
+
+kw2 - SELECT nazwa FROM `szczyty` ORDER BY szczyty.wysokosc DESC LIMIT 1;
+
+kw3 - CREATE USER 'leon'@'localhost' IDENTIFIED BY "Leon%zawodowiec";
+
+kw4 - GRANT ALL ON `szczyty` TO  'leon'@'localhost';
+
+kw5 - SHOW GRANTS FOR 'leon'@'localhost';

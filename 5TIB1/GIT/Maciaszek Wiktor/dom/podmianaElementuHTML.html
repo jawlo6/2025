@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="div1">
+        <p id="p1">To jest pierwszy akapit</p>
+        <p id="p2">To jest drugi akapit</p>
+    </div>
+
+</body>
+
+    <script>
+        let akapit=document.createElement("p");
+        let content=document.createTextNode("Nowy akapit");
+        akapit.appendChild(content);
+        let parent=document.querySelector( "#div1" );
+        let child=document.querySelector( "#p1" );
+        parent.replaceChild( akapit, child );
+    </script>
+
+</html>

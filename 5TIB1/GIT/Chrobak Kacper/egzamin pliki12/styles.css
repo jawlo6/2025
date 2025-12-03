@@ -1,0 +1,64 @@
+*{
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+body{
+    background-color: lightcyan;
+    margin:0px;
+}
+header,footer{
+    background-color: steelblue;
+    color: white;
+    padding: 10px;
+}
+
+article{
+    padding-top: 40px;
+    margin: 1%;
+
+}
+@media(min-width:800px){
+    article{
+        width: 30%;
+        
+    }
+    main{
+        display: flex;
+    }
+}
+
+@media(max-width:799px){
+    article{
+        width: 98%;
+    }
+    main{
+        display: block;
+    }
+}
+
+#pierwszy{
+    background-color: dodgerblue;
+}
+
+#drugi{
+    background-color: limegreen;
+}
+
+#trzeci{
+    background-color: darkorchid;
+}
+
+img{
+    width: 70%;
+}
+
+p{
+    padding: 20px;
+}
+
+table{
+    margin: auto;
+    width: 70%;
+    border: 1px, solid, steelblue;
+}

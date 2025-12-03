@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="akapit"></p>
+
+    <script>
+        let i = 1;
+
+        function myFunction() {
+            const akapit = document.getElementById("akapit");
+            if (i <= 10) {
+                akapit.innerHTML += i++ + "<br>";
+            } else {
+                akapit.innerHTML = "";
+                i = 1;
+            }
+        }
+
+        setInterval(myFunction, 1000);
+    </script>
+</body>
+</html>

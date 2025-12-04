@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Czatowanie w JavaScript</title>
+    </head>
+    <body>
+        <main>
+            <section id="chatWindowResources">
+                <div class="message_Jolka">
+                    <img src="Jolka.jpg" alt="Jolanta Nowak">
+                    <p id="defaultMessage_Jolka">Cześć, idziesz jutro do kina?</p>
+                </div>
+                <div class="message_Krzysztof">
+                    <img src="Krzysztof.jpg" alt="Krzysztof Łukasiński">
+                    <p id="defaultMessage_Krzysztof">Tak! A ty?</p>
+                </div>
+            </section>
+            <section id="chatWindowMessageForm">
+                <form>
+                    <label for="chatInputData">Wpisz wiadomość:</label>
+                    <input type="text" id="chatInputData"/>
+                    <button type="button" id="chatSendButton" onclick="sendMessage()">Wyślij</button>
+                    <br>
+                    <button type="button" id="generateRandomMessage"onclick="generateRandomMessage()"></button>
+                </form>
+            </section>
+        </main>
+        <script src="chat.js"></script>
+    </body>
+</html>

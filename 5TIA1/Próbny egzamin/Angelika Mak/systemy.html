@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systemy liczbowe</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <img src="cyfry.gif" alt="cyfry szestnastkowe">
+        <h1>Pozycyjne systemy liczbowe</h1>
+    </header>
+    <div class="lewy">
+        <table>
+            <tr>
+                <th><b>Hex</b></th>
+                <th><b>Bin</b></th>
+                <th><b>Dec</b></th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>1010</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>1011</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>1100</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>1101</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>1110</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>1111</td>
+                <td>15</td>
+            </tr>
+        </table>
+    </div>
+    <div class="srodek">
+        <input type="number" placeholder="Wpisz liczbe Dziesietna" id="number">
+        <button onclick="obliczenia()">Przelicz na binarny</button>
+        <p id="obliczenie">Brak obliczen</p>
+    </div>
+    <div class="prawy">
+        <h2>Słowniczek</h2>
+        <dl>
+Binarny<br>
+pozycyjny system liczbowy, w którym podstawą jest liczba 2, a do zapisu liczb potrzebne są tylko dwie cyfry: 0 i 1.<br>
+Decymalny<br>
+pozycyjny system liczbowy, w którym podstawą jest liczba 10; do zapisu liczb stosuje się 10 cyfr: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.<br>
+<a href="https://szesnastkowy_system_liczbowy.pl">Heksadecymalny</a><br>
+pozycyjny system liczbowy, w którym podstawą jest liczba 16. Do zapisu liczb w tym systemie potrzebne jest szesnaście znaków.<br>
+        </dl>
+    </div>
+    <footer>
+        <p>Strone opracowała: Mak Angelika <i>(3 stanowisko)</i></p>
+    </footer>
+    <script>
+        function obliczenia(){
+            $liczba=document.getElementById("#number");
+            $binarna= ""
+            $binarna= $liczba%2;
+            $liczba= $liczba/2;
+            Math.round($liczba);
+            if($liczba=0){
+                $tekst=document.getElementsByID("#obliczenie");
+                $tekst.element.innerHTML= $liczba + "(2)";
+            }
+            else{
+                $binarna= $liczba%2;
+                $liczba= $liczba/2;
+                Math.round($liczba);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Losowanie liczb</title>
+</head>
+<body>
+
+<h2>Wylosowana liczba:</h2>
+<div id="wynik" style="font-size: 40px; font-weight: bold;"></div>
+
+<script>
+    function losuj() {
+        const liczba = Math.random(); 
+        document.getElementById("wynik").textContent = liczba;
+    }
+
+   
+    setInterval(losuj, 1000);
+</script>
+
+</body>
+</html>

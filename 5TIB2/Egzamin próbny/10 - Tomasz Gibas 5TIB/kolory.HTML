@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomocnik CSS</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <header id="baner1">
+        <h1>Pomocnik CSS</h1>
+    </header>
+    <header id="baner2">
+        <ul>
+            <li><a href="kolory.html">Kolory</a></li>
+            <li><a href="czcionki.html">Czcionki</a></li>
+            <li><a href="style.html">Style CSS</a></li>
+            <li><a href="https://www.w3schools.com/css/" target="_blank">Pomoc</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <h2>Podaj składową H koloru w kodzie HSL</h2>
+        <p>0 do 30 czerwienienie, do 60 żółcie, do 150 zielenie, do 250 niebieskie, do 360 fiolet 
+i purpura</p>
+    <img src="kolory.JPG" alt="Przestrzeń braw HSl";><br>
+        <input type="number" id="skr" name="nazwa" max="360" placeholder="0 - 360">
+        <button onclick="skrypt()">Generuj paletę</button>
+
+
+    <table>
+        <tr>
+            <td id="t1" colspan="4">Kolor głowny</td>
+        </tr>
+        <tr>
+            <td id="t2">Kolor 2</td>
+            <td id="t3">Kolor 3</td>
+            <td id="t4">Kolor 4</td>
+            <td id="t5">Kolor 5</td>
+        </tr>
+    </table>
+    </main>
+    <footer>
+        <p>Autor: Tomasz Gibas</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

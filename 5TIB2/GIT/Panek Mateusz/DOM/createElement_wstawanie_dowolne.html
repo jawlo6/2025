@@ -1,0 +1,8 @@
+<script>
+    let container = document.createElement("div");
+    let p = document.createElement("p");
+    container.appendChild(p);
+    let span = document.createElement("span");
+    p.before(span); // span wstawiamy przed p
+    console.log(container.outerHTML); // "<div><span></span><p></p></div>"
+</script>

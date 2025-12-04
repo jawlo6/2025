@@ -1,0 +1,9 @@
+KWERENDY - MAKÓWKA MAKÓWKA
+
+1) INSERT INTO logowanie (id,nick,haslo) VALUES (3,'Jeremi','Jer123');
+2)SELECT AVG(rokUr) AS "Średni rok urodzenia" FROM uczestnicy;
+3)SELECT imie,nazwisko,nick, haslo FROM uczestnicy JOIN logowanie ON logowanie_id=logowanie.id WHERE imie LIKE "J%";
+4)CREATE USER 'uczestnik11'@'localhost' IDENTIFIED BY "Ucz123&";
+5)GRANT SELECT, UPDATE ON chat.uczestnicy TO uczestnik11@localhost;
+
+MUSIAŁEM STWORZYC UCZESTNIK11 BO INNE BYLY ZAJETE!!!!!

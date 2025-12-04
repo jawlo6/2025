@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<style>
+        .p{
+            border: solid 1px red;
+        }
+    </style>
+<html lang="en">
+    <div id="box"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const box=document.querySelector("#box");
+        const akapit=document.createElement('p');
+        akapit.classList.add('p');
+        akapit.innerHTML = "To jest akapit";
+        box.appendChild(akapit);
+    </script>
+</body>
+</html>

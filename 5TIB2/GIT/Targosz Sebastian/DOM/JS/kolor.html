@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+
+<p id="tekst" style="cursor:pointer;">kliknij mnie</p>
+
+<img id="img1" src="1.jpg" width="500">
+<img id="img2" src="2.jpg" width="500">
+
+<script>
+    // Kliknięcie tekstu
+    const t = document.getElementById("tekst");
+
+    t.addEventListener("click", function () {
+        t.style.color = "red";
+        t.style.border = "2px solid black";
+        t.style.padding = "4px";
+    });
+
+    // Zamiana obrazków
+    const img1 = document.getElementById("img1");
+    const img2 = document.getElementById("img2");
+
+    setInterval(() => {
+    
+        let temp = img1.src;
+        img1.src = img2.src;
+        img2.src = temp;
+    }, 1000); 
+
+</script>
+
+</body>
+</html>

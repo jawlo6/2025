@@ -1,0 +1,10 @@
+Microsoft Edge	142.0.3595.94 (Oficjalna kompilacja) (wersja 64-bitowa) 
+Poprawka	6565d6e52817b2cc1cc39186799218803a00a752
+Wersja przeglądarki Chromium	142.0.7444.176
+System operacyjny	Windows 10 Version 22H2 (Build 19045.6466)
+JavaScript	V8 14.2.17.8
+Agent użytkownika	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+Wiersz polecenia	"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --no-startup-window --win-session-start --flag-switches-begin --flag-switches-end
+Ścieżka pliku wykonywalnego	C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe
+Ścieżka profilu	C:\Users\egzamin\AppData\Local\Microsoft\Edge\User Data\Default
+Odmiany wiersza polecenia	eyJkaXNhYmxlLWZlYXR1cmVzIjoiIiwiZW5hYmxlLWZlYXR1cmVzIjoiIiwi...	

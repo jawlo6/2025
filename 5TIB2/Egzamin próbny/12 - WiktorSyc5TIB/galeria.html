@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <div id="banner">
+        <h1>Galeria obrazów</h1>
+    </div>
+
+
+    <div id="lewy">
+        <img src="zdjecie.jpg" alt="zdjęcie dnia">
+        <h3>Zdjęcia opublikowali</h3>
+        <table>
+            <tr>
+                <td>Anna Porada</td>
+                <td>10 zdjęć</td>
+            </tr>
+            <tr>
+                <td>Krzysztof Wasilewski</td>
+                <td>12 zdjęć</td>
+            </tr>
+            <tr>
+                <td>Monika Kowalska</td>
+                <td>4 zdjęcia</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+    <div id="prawy">
+        <input type="button" value="prev" onclick="podgladobrazka()">
+        <img id="galleryImage" src="1.jpg" alt="galeria">
+        <input type="button" value="next" onclick="kolejnyobrazek()">
+        <hr>
+        <img src="1.jpg" alt="miniatura" class="miniatura" onclick="zmienobrazek('1.jpg')">
+        <img src="2.jpg" alt="miniatura" class="miniatura" onclick="zmienobrazek('2.jpg')">
+        <img src="3.jpg" alt="miniatura" class="miniatura" onclick="zmienobrazek('3.jpg')">
+        <img src="4.jpg" alt="miniatura" class="miniatura" onclick="zmienobrazek('4.jpg')">
+        <img src="5.jpg" alt="miniatura" class="miniatura" onclick="zmienobrazek('5.jpg')">
+    </div>
+
+    <script>
+        var currentImageIndex = 0;
+        var imageArray = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'];
+
+        function podgladobrazka(){
+            currentImageIndex = (currentImageIndex - 1 + imageArray.length) % imageArray.length;
+            aktualizacjaobrazka()
+        }
+
+        function kolejnyobrazek(){
+            currentImageIndex = (currentImageIndex + 1) % imageArray.length;
+            aktualizacjaobrazka()
+        }
+
+        function zmienobrazek(imageName){
+            currentImageIndex = imageArray.indexOf(imageName)
+            aktualizacjaobrazka();
+        }
+
+        function aktualizacjaobrazka(){
+            var galleryImage = document.getElementById('galleryImage');
+            galleryImage.src = imageArray[currentImageIndex];
+        }
+
+    </script>
+
+
+    <div id="footer">
+        <a href="https://pixabay.com/">Więcej obrazów</a>
+        <p>Galerię wykonał: Wiktor Syc 5TiB</p>
+    </div>
+    
+</body>
+</html>

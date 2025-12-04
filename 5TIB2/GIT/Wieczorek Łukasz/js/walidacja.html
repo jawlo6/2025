@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Walidacja formularza poprzez przeglądarkę</p>
+    <form action="write208.php" method="post">
+        <input type="text" name="fname " required>
+        <input type="submit" value="zapisz w BD">
+    </form>
+    <h2>Ograniczenie zakresu danych</h2>
+    <form>
+        <label>Podaj wiek
+        <input type="number" required>
+        <input type="submit" value="Wyślij">
+        </label>
+    </form>
+
+<h2>Walidacja zakresu liczb</h2>
+    <form>
+        <label>Podaj wiek
+        <input type="number" min="0" max="130">
+        <input type="submit" value="Wyślij">
+        </label>
+    </form>
+</body>
+</html>

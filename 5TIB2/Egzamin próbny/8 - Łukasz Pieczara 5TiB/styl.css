@@ -1,0 +1,82 @@
+*
+{
+    font-family: Georgia;
+    color: white;
+}
+
+header, footer
+{
+    background-color: maroon;
+    text-align: center;
+    padding: 2px;
+}
+
+#lewy, #srodek, #prawy
+{
+    background-color: lightsalmon;
+    height: 527px;
+}
+
+#lewy, #prawy
+{
+    width: 15%;
+    float: left;
+}
+
+#srodek
+{
+    width: 70%;
+    float: left;
+}
+
+#mini
+{
+    background-color: maroon;
+    height: 70px;
+    clear: both;
+}
+
+button
+{
+    background-color: lightsalmon;
+    color: maroon;
+    border: none;
+    font-size: 400%;
+    display: block;
+    margin: auto;
+    padding-top: 210px;
+}
+
+
+#mini > img
+{
+    height: 70px;
+    animation-name: mymove;
+    animation-duration: 4s ;
+}
+
+@keyframes mymove {
+    from {padding-left: 50px;}
+    to {padding-left: 0px;}
+}
+
+
+#srodek > img
+{ 
+    display: block;
+    margin: auto;
+    padding-top: 45px;
+}
+
+
+#srodek > img:hover
+{
+    animation-name: skala;
+    animation-duration: 5s;
+    
+}
+
+@keyframes skala {
+    from {scale: 100%;}
+    to {scale: 120%;}
+}

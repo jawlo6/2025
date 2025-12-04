@@ -1,0 +1,57 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+
+}
+header, footer{
+    background-color: #824555;
+    text-align: center;
+    padding: 20px;
+}
+
+.lewy, .srodek{
+    width: 30%;
+    height: 350px;
+}
+.lewy{
+    background-color: #A26475;
+    float: left;
+}
+.srodek{
+    background-color: #824555;
+    float:left
+}
+.prawy{
+    float: right;
+    background-color: #A26475;
+    width: 40%;
+    height: 350px;
+    
+}
+div{
+    display:block;
+}
+footer{
+    clear: both ;
+}
+img{
+    float: left;
+    text-wrap:inherit;
+    width: 50px;
+}
+table, p, dl{
+    margin: 10px;
+}
+dl{
+    padding-top: 20px;
+}
+th,td{
+    border: solid 3px #824555;
+    padding: 5px;
+}
+button{
+    color: black;
+}
+input{
+    color: black;
+}

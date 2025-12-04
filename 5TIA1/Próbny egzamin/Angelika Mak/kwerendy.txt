@@ -1,0 +1,15 @@
+ Zapytanie 1: wybierające jedynie pseudonimy zawodników, którzy zdobyli tytuł w lipcu 2020 roku:
+SELECT pseudonim FROM `zawodnicy` WHERE data_zdobycia like "2020-06-%%";
+
+ Zapytanie 2: wybierające jedynie pseudonimy i tytuły zawodników z klasy 3A który zdobyli 
+dowolny, niepusty tytuł
+SELECT pseudonim, tytul FROM `zawodnicy` WHERE klasa="3A" && tytul like "_%";
+
+ Zapytanie 3: wybierające jedynie pseudonim, klasę i ranking dla pierwszych 10 zawodników
+ o najniższej pozycji w  rankingu, posortowane według rankingu
+SELECT pseudonim, klasa, ranking FROM `zawodnicy` ORDER BY ranking DESC LIMIT 10;
+
+ Zapytanie 4: wybierające dla zawodników z niepustym tytułem jedynie pseudonim i datę zdobycia 
+oraz obliczające ile minęło dni od daty zdobycia tytułu do dnia dzisiejszego. Obliczona liczba dni 
+powinna być zapisana pod nazwą kolumny (aliasem) „dni
+SELECT pseudonim, data_zdobycia, data_zdobycia AS "dni" FROM `zawodnicy` WHERE tytul like "_%";

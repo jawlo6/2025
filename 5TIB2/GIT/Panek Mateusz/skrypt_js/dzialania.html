@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        PROSTE DZIAŁANIA
+    </h1>
+
+    <label>Podaj pierwszą liczbe: </label>
+    <input type="number" id="pierwsza_liczba" name="pierwsza_liczba">
+
+    <br>
+    <br>
+
+    <label>Podaj drugą liczbę: </label>
+    <input type="number" id="druga_liczba" name="druga_liczba">
+
+    <br>
+    <br>
+
+    <button onclick="f(1)">DODAWANIE</button>
+    <button onclick="f(2)">ODEJMOWANIE</button>
+    <button onclick="f(3)">MNOŻENIE</button>
+    <button onclick="f(4)">DZIELENIE</button>
+
+    <br>
+    <br>
+
+    <h2>Wynik to: </h2>
+    <output id="wynik"></output>
+
+    <script>
+        function f(operacja) {
+            let liczba1 = parseInt(document.querySelector("#pierwsza_liczba").value);
+            let liczba2 = parseInt(document.querySelector("#druga_liczba").value);
+            let wynik;
+            console.log(liczba1, liczba2);
+
+            if( isNaN(liczba1) || isNaN(liczba2)) {
+                wynik="Prosze uzupełnić obie liczby";
+            }
+            else {
+                switch(operacja) {
+                    case 1:
+                        wynik=liczba1+liczba2;
+                        break;
+                    case 2:
+                        wynik=liczba1-liczba2;
+                        break;
+                    case 3:
+                        wynik=liczba1*liczba2;
+                        break;
+                    case 4:
+                        if(liczba2==0) {
+                            wynik="Nie dzielimy przez zero";
+                        }
+                        else {
+                            wynik=liczba1/liczba2;
+                        }
+                }
+            }
+            let rezult = document.querySelector("#wynik");
+
+            rezult.innerHTML=wynik;
+            console.log(wynik);
+
+        }
+    </script>
+</body>
+</html>

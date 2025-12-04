@@ -1,0 +1,47 @@
+body{
+	margin: 0;
+	background: #E0F7FA;
+	font-family: Arial;
+	text-align: center;
+}
+main{
+	width: 95%;
+	margin: auto;
+}
+.baner{
+	background: #00838F;
+	height: 200px;
+}
+menu{
+    margin: 0;
+	background: #006064;
+	padding: 15px;
+}
+a{
+	color: white;
+	text-decoration: none;
+	font-size: 150%;
+    padding: 20px;
+}
+.main1,.main2,.main3{
+	height: 350px;
+	width: 33%;
+	float: left;
+}
+footer{
+	background: #006064;
+	color: white;
+	text-align: right;
+	padding: 10px;
+	clear: both;
+}
+ul{
+	text-align: left;
+}
+button{
+	background: #00838F;
+	color: white;
+}
+button:hover{
+	color: #80DEEA;
+}

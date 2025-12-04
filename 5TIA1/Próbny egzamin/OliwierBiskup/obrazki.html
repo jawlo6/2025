@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+    <main>
+        <section>
+            <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku" id="PszczolaObraz">
+            <form>
+                <input type="radio" name="wybor" id="blur">
+                <label for="blur">Blur</label>
+                <br>
+                <input type="radio" name="wybor" id="sepia">
+                <label for="sepia">Sepia</label>
+                <br>
+                <input type="radio" name="wybor" id="negatyw">
+                <label for="negatyw">Negatyw</label>
+            </form>
+            
+            <button id="PszczolaGuzik" onclick="FiltryPszczola()">Zastosuj</button>
+        </section>
+        <section>
+            <img src="pomarancza.jpg" alt="drzewo pomarańczy" id="PomaranczeObraz">
+            <br>
+            <button id="KolorowyGuzik" onclick="FiltryPomarancze_Kolorowe()">Kolorowy</button>
+            <button id="BWGuzik" onclick="FiltryPomarancze_BW()">Czarno biały</button>
+        </section>
+        <section>
+            <img src="owoce.jpg" alt="Kosz pełen owoców" id="OwoceObraz">
+            <input type="range" id="suwakOwoce" min="0" max="100" value="100">
+            <br>
+            <button id="OwoceGuzik" onclick="FiltryOwoce()">Zastosuj</button>
+        </section>
+        <section>
+            <img src="zolw.jpg" alt="Żółw w wodzie" id="ZolwObraz">
+            <input type="range" id="suwakZolw" min="0" max="250">
+            <br>
+            <button id="ZolwGuzik" onclick="FiltryZolw()">Zastosuj</button>
+        </section>
+        <script src="skrypt.js"></script>
+    </main>
+    <footer>
+        <p><a href="http://www.css.com">Zobacz inne efekty</a></p>
+        <p>Strone wykonał: Oliwier Biskup</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+kw1
+
+SELECT zamowienia.plik, zamowienia.nr_klienta, zamowienia.liczba_odbitek 
+FROM zamowienia 
+WHERE zamowienia.liczba_odbitek >'100' 
+AND zamowienia.rodzaj ='matowy';
+
+kw2
+
+
+
+kw3
+
+SELECT COUNT(zamowienia.liczba_odbitek) FROM zamowienia WHERE zamowienia.rodzaj = 'błyszczący';
+
+kw4
+
+CREATE USER 'Anna'@'localhost' IDENTIFIED BY '@NNa';

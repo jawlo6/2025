@@ -1,0 +1,11 @@
+Zapytanie 1: 
+SELECT plik, nr_klienta , liczba_odbitek From zamowienia where rodzaj = 'Matowy'And liczba_odbitek > 100;
+
+Zapytanie 2:
+SELECT (liczba_odbitek * cena ) AS 'Do Zapłaty' From zamowienia join zdjecia on zamowienia.rodzaj WHERE zamowienia.nr_klienta = 3;
+
+Zapytanie 3:
+SELECT SUM(liczba_odbitek) From zamowienia where rodzaj = 'błyszczący';
+
+Zapytanie 4:
+CREATE user 'Anna@localhost' IDENTIFIED By '@NNa';

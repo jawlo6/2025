@@ -1,0 +1,123 @@
+@font-face {
+    font-display: swap;
+    font-family: "Affinity Serif Variable";
+    font-style: normal;
+    font-weight: 400 500 700;
+    src: url(https://static.canva.com/web/images/f88bdc74edcfbd9b9933d32b514efe34.woff2) format("woff2");
+    unicode-range: u+0000,u+000d,u+0020-007e,u+00a0-00a3,u+00a5,u+00a7-00a9,u+00ab,u+00ae-00b0,u+00b4,u+00b6-00b8,u+00bb,u+00bf-0131,u+0134-0137,u+0139-0148,u+014a-017e,u+01fc-01ff,u+0218-021b,u+0237,u+02c6-02c7,u+02d8-02dd,u+0300-0304,u+0306-0308,u+030a-030c,u+0312,u+0326-0328,u+034f,u+1e80-1e85,u+1e9e,u+2002-2005,u+2007-200d,u+2013-2014,u+2018-201a,u+201c-201e,u+2020-2022,u+2026,u+202f,u+2039-203a,u+20ac,u+2122,u+2190-2193,u+2212,u+feff,u+ffff
+}
+
+body {
+    font-family: 'Affinity Serif Variable', 'ALSHauss', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+section {
+    background: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-top: 0;
+    color: #444;
+    font-size: 1.2em;
+    border-left: 5px solid #3498db;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.customCodeFont {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #555;
+}
+
+
+.colorName { color: red; }
+.colorHEX { color: #2ecc71; }
+.colorRGB { color: rgb(0, 0, 255); }
+.colorRGBa { color: rgba(0, 0, 0, 0.5); font-weight: bold; }
+
+
+.txtAlgn_Left { text-align: left; }
+.txtAlgn_Center { text-align: center; }
+.txtAlgn_Right { text-align: right; }
+.txtAlgn_Justify { 
+    text-align: justify; 
+    border: 1px dashed #ccc; 
+    padding: 10px;
+}
+
+
+.verticalAlign_Box {
+    background-color: #eee;
+    padding: 10px;
+}
+.vertAlgn_Super { vertical-align: super; font-size: 0.7em; color: red; }
+.vertAlgn_Sub { vertical-align: sub; font-size: 0.7em; color: blue; }
+.vertAlgn_Mid { 
+    display: inline-block; 
+    width: 20px; 
+    height: 20px; 
+    background: orange; 
+    vertical-align: middle; 
+}
+
+.txtDecor_None { text-decoration: none; color: grey; cursor: pointer; }
+.txtDecor_Underline { text-decoration: underline; }
+.txtDecor_Overline { text-decoration: overline; }
+.txtDecor_LineThrough { text-decoration: line-through; }
+.txtDecor_UnderlineCustomExmpl { text-decoration: underline wavy red; }
+
+
+.txtTrans_Upper { text-transform: uppercase; }
+.txtTrans_Lower { text-transform: lowercase; }
+.txtTrans_Cap { text-transform: capitalize; }
+
+
+.letterSpacing { letter-spacing: 5px; }
+.wordSpacing { word-spacing: 15px; }
+.lineHeight_Exmpl { 
+    line-height: 2.5; 
+    background-color: #f9f9f9; 
+    border-left: 3px solid #ccc;
+    padding-left: 10px;
+}
+
+.txtShadow_ { text-shadow: 2px 2px 2px #aaa; font-size: 1.2em; }
+.txtShadow_Glow { 
+    color: white;
+    background: #333;
+    padding: 10px;
+    display: inline-block;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00de, 0 0 20px #ff00de; 
+    font-weight: bold;
+}
+.txtShadow_3D {
+    padding: 3px 7px;
+    background: #afafaf;
+    font-weight: bold;
+    font-size: 2em;
+    color: #f0f0f0;
+    text-shadow: 
+        1px 1px 0 #999,
+        2px 2px 0 #888,
+        3px 3px 0 #777,
+        4px 4px 0 #666;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Planer zadań</title>
+  <link rel="stylesheet" href="styl.css" />
+
+</head>
+<body>
+  <aside>
+    <img src="obraz.jpg" alt="notatki" />
+  </aside>
+
+  <section id="kontyner">
+    <header>
+      <h2>Moje zadania</h2>
+    </header>
+
+    <nav>
+      <input type="text" id="zadanie" placeholder="Dodaj zadanie..." />
+      <button onclick="Dodaj()">Dodaj</button>
+    </nav>
+
+    <main>
+      <ul id="lista">
+        <li>Wyprowadzić psa<button type="button" onclick="zaznacz(this)">Wykonane</button></li>
+        <li>Gimnastyka<button type="button" onclick="zaznacz(this)">Wykonane</button></li>
+        <li>Zakupy<button type="button" onclick="zaznacz(this)">Wykonane</button></li>
+        <li>Spacer z kumplem<button type="button" onclick="zaznacz(this)">Wykonane</button></li>
+        <li>Odrabianie lekcji z młodszą siostrą<button type="button" onclick="zaznacz(this)">Wykonane</button></li>
+        <li>Projekt na geografię<button type="button" onclick="zaznacz(this)">Wykonane</button></li>
+      </ul>
+    </main>
+
+    <footer>
+      <h3>Nr 16 z dziennika</h3>
+    </footer>
+  </section>
+
+  <script>
+    function zaznacz(clickedButton) {
+    const element = clickedButton.parentElement
+    element.style = "text-decoration: line-through"
+}
+function Dodaj() {
+    const lista = document.querySelector("ul")
+    const zadanie = document.querySelector("input")
+    let NowyElement = document.createElement("li")
+    NowyElement.innerHTML = `${zadanie.value}<button type="button" onclick="zaznacz(this)"">Wykonane</button>`
+    lista.appendChild(NowyElement)
+}
+  </script>
+</body>
+</html>

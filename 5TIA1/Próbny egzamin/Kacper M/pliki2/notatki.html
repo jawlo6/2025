@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planer zadań</title>
+    <link rel="stylesheet" href="styl.css">
+    <script>
+        let id = 6;
+        function dodawanie(){
+            id++;
+            let nowyElement = document.createElement("li");
+            nowyElement.setAttribute('id',id);
+            let text = document.createElement("text");
+            text.innerText = document.querySelector("#myZad").value;
+            let button = document.createElement("button");
+            button.setAttribute('onclick', 'wykonane(value)');
+            button.value = id;
+            button.innerHTML = "Wykonane";
+            nowyElement.appendChild(text);
+            nowyElement.appendChild(button);
+            document.querySelector("#koniec").before(nowyElement);
+
+        }
+        function wykonane(w){
+            let element = document.querySelector(`#\w/`);
+            console.log(element);
+            element = element.querySelector("text");
+            element.setAttribute('class', "wykonane");
+            console.log(2)
+        }
+    </script>
+</head>
+<body>
+    <div class="grid">
+        <menu>
+            <img src="obraz1.png" alt="notatki">
+        </menu>
+        <div id="prawy">
+            <header>
+                <h2>Moje zadania</h2>
+            </header>
+            <nav>
+                <input type="text" name="DodajZad" id="myZad">
+                <button onclick="dodawanie()">Dodaj</button>
+            </nav>
+            <main>
+                <ul>
+                    <li value="1">
+                        <text>Wyprowadzić psa</text><button onclick="wykonane(1)" value="1">Wykonane</button>
+                    </li>
+                    <li value="2">
+                        <text>Gimnastyka</text><button onclick="wykonane(2)" value="2">Wykonane</button>
+                    </li>
+                    <li value="3">
+                        <text>Zakupy</text><button onclick="wykonane(3)" value="3">Wykonane</button>
+                    </li>
+                    <li value="4">
+                        <text>Spacer z kumplem</text><button onclick="wykonane(4)" value="4">Wykonane</button>
+                    </li>
+                    <li value="5">
+                        <text>Odrabianie lekcji z młodszą siostrą</text><button onclick="wykonane(5)" value="5">Wykonane</button>
+                    </li>
+                    <li value="6">
+                        <text>Projekt na geografię</text><button onclick="wykonane(6)" value="6">Wykonane</button>
+                    </li>
+                    <h1 hidden id="koniec"></h1>
+                </ul>
+            </main>
+            <footer>
+                <h3>Notatki: 0000000000</h3>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

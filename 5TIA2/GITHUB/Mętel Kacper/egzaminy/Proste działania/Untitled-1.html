@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test(liczba1, liczba2){
+            if (isNaN(liczba1) || isNaN(liczba2))
+            {
+                document.getElementById(odpowiedz).innerText = "liczba jest nieprawidlowa";
+                return 0;
+            } else {return 1;}
+        }
+        function dodawanie(){
+            const liczba1 = document.getElementById("pierwsza").valueAsNumber;
+            const liczba2 = document.getElementById("druga").valueAsNumber;
+            wynik = liczba1 + liczba2;
+            if(test(liczba1, liczba2) == 1){
+                wynik = liczba1 + liczba2;
+                console.log(wynik);
+                document.getElementById(odpowiedz).innerHTML = wynik
+            };
+        }
+        function odjemowanie(){
+             liczba1 = document.getElementById("pierwsza").valueAsNumber;
+             liczba2 = document.getElementById("druga").valueAsNumber;
+            if(test(liczba1, liczba2) == 1){
+                wynik = liczba1 - liczba2;
+                console.log(wynik);
+                document.getElementById(odpowiedz).innerHTML = wynik
+            };
+        }
+        function mnozenie(){
+            liczba1 = document.getElementById("pierwsza").valueAsNumber;
+            liczba2 = document.getElementById("druga").valueAsNumber;
+            if(test(liczba1, liczba2) == 1){
+                wynik = liczba1 * liczba2;
+                console.log(wynik);
+                document.getElementById(odpowiedz).innerHTML = wynik
+            };
+        }
+        function dzielenie(){
+            liczba1 = document.getElementById("pierwsza").valueAsNumber;
+            liczba2 = document.getElementById("druga").valueAsNumber;
+            if(test(liczba1, liczba2) == 1){
+                if(liczba2 != 0){
+                wynik = liczba1 / liczba2;
+                console.log(wynik);
+                } else {wynik ="druga liczba nie może być równe 0"}
+            };
+            document.getElementById(odpowiedz).innerHTML = wynik
+        }
+    </script>
+</head>
+<body>
+    <h1>Proste działania</h1>
+    <form>
+        <label for="pierwsza">Podaj pierwszą liczbę: </label>
+        <input type="number" id="pierwsza">
+        <p></p>
+        <label for="druga">Podaj drugą liczbę: </label>
+        <input type="number" id="druga">
+        <p></p>
+        <button type="button" onclick="dodawanie()">DODAWANIE</button>
+        <button type="button" onclick="odjemowanie()">ODEJMOWANIE</button>
+        <button type="button" onclick="mnozenie()">MNOŻENIE</button>
+        <button type="button" onclick="dzielenie()">DZIELENIE</button>
+        <output id="odpowiedz"></output>
+    </form>
+</body>
+</html>

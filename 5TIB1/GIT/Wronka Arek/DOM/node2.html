@@ -1,0 +1,11 @@
+let container = document.createElement("div");
+let p = document.createElement("p");
+container.appendChild(p);
+p.innerHTML="akapit";
+let span = document.createElement("span");
+
+// Kluczowa linijka: wstaw span ZA p
+p.after(span);
+
+console.log(container.outerHTML);
+// Wynik: "<div><p>akapit</p><span></span></div>"

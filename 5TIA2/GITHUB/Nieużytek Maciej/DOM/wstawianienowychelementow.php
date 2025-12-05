@@ -1,0 +1,9 @@
+let container = document.createElement("div");
+let p = document.createElement("p");
+container.appendChild(p);
+
+let span = document.createElement("span");
+p.before(span);
+
+console.log(container.outerHTML);
+// "<div><span></span><p></p></div>”

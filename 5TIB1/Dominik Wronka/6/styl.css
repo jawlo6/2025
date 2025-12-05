@@ -1,0 +1,85 @@
+*{
+    font-family: Garamond;
+}
+body{
+    gap: 0px;
+}
+header{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    width: 80%;
+    height: 80px;
+}
+
+main{
+    width: 80%;
+    height: 600px;
+}
+
+menu{
+    background-color: coral;
+    width: 20%;
+    height: 680px;
+}
+
+footer{
+    color: white;
+    background-color: tomato;
+    text-align: center;
+}
+img{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 50%;
+}
+#chatbox{
+    border: 1px solid tomato;
+    margin: 15px;
+    height: 470px;
+    overflow: scroll;
+    scroll-behavior: auto;
+}
+
+#Jolanta, #Krzysztof{
+    border-radius: 5px;
+    width: 90%;
+    height: 70px;
+    margin: 2%;
+    padding: 3px;
+}
+#Jolanta{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    background-color: #EEE;
+}
+#Krzysztof{
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: right;
+    background-color: #ccc;
+
+}
+
+button{
+    background-color: tomato;
+    border: 1px solid darkred;
+    font-weight: bold;
+    padding: 5px;
+}
+#msg{
+    width: 500px;
+}
+
+#flexglowny{
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#flexmenu{
+    gap: 0;
+    display: flex;
+    flex-direction: row;
+}

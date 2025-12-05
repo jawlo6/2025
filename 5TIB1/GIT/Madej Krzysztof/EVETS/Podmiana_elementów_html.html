@@ -1,0 +1,16 @@
+<p  style="color: blueviolet;" > ! INFORMACJA JAKI TEMAT KODU -> Dodanie stylu do elementu </p> 
+
+<style>
+    p {   border:solid 1px red}
+</style>
+
+<html>
+  <div id="box"></div>
+  </html>
+    <script>
+        const box=document.querySelector('#box');
+        const akapit=document.createElement('p');
+        akapit.classList.add('p');
+        akapit.innerHTML="to jest akapit";
+        box.appendChild(akapit)
+    </script>

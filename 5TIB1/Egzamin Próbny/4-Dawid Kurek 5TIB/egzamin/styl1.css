@@ -1,0 +1,46 @@
+*{
+   font-family: Georgia;
+   font-style: white ;
+   
+   }
+ header,footer {
+    background-color: maroon;
+    padding: 2px;
+}
+ #lewy ,  #środkowy,  #prawy{
+     background-color: lightsalmon;
+     height: 527px;
+}
+#lewy, #prawy{
+ width: 15%;
+}
+ #środkowy{
+    width: 70%;
+}
+#Miniatura{
+    background-color: maroon
+    height: 70px:
+    
+}
+ button{
+    background-color: lightsalmon;
+    font-style: maroon;
+    font-size: 400%;
+    margin-inline-start: auto;
+    padding-top: 210px;
+}
+#miniatur{
+    height: 70px;
+    animation-duration: 4s; 
+    animation: step-start 
+    padding 50px    ;
+    animation: step-end
+    padding left 0px ;
+}
+#środkowy{
+    border-block: ;
+    margin-inline-start: auto;
+   margin-top: 45px;
+  
+
+}

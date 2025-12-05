@@ -1,0 +1,7 @@
+SELECT plik,nr_klienta,liczba_odbitek FROM zamowienia WHERE rodzaj like'matowy' AND liczba_odbitek > 100;
+
+SELECT zamowienia.id_zam, zamowienia.nr_klienta, zamowienia.liczba_odbitek, zamowienia.rodzaj, (zamowienia.liczba_odbitek * zdjecia.cena) AS "Do zapłaty" FROM zamowienia JOIN zdjecia ON zamowienia.rodzaj = zdjecia.rodzaj WHERE zamowienia.nr_klienta = 3;
+
+SELECT SUM(liczba_odbitek) FROM zamowienia WHERE rodzaj like 'błyszczący';
+
+CREATE USER 'Anna'@'localhost' IDENTIFIED BY '@NNa';

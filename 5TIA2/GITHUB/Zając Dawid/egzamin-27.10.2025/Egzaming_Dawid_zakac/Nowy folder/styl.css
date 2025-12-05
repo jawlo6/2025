@@ -1,0 +1,70 @@
+body {
+  background-color: #E0F7FA;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 95%;
+  margin: auto;
+}
+
+
+.banner {
+  background-color: #00838F;
+  height: 200px;
+}
+
+
+menu {
+  background-color: #006064;
+  padding: 15px;
+}
+
+
+menu a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 150%;
+  margin: 0 12px;
+}
+
+
+main .box {
+  height: 350px;
+  width: 33%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+footer {
+  background-color: #006064;
+  color: white;
+  text-align: right;
+  padding: 10px;
+}
+
+
+ul {
+  text-align: left;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+
+button {
+  background-color: #00838F;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+
+button:hover {
+  color: #80DEEA;
+}

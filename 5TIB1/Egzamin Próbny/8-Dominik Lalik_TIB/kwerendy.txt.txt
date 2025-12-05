@@ -1,0 +1,8 @@
+1 SELECT plik, nr_klienta,liczba_odbitek, rodzaj from zamowienia 
+WHERE rodzaj = matowy AND liczba odbitek > 100;
+2SELECT (liczba_odbitek *cena) as 'do zaplaty' FROM zamowienia
+ JOIN zdjecia ON zamowienia.rodzaj = zdjecia.rodzaj WHERE zamowienia.nr_klienta = 3;
+3SELECT COUNT(liczba_odbitek) 
+FROM zamowienia
+WHERE rodzaj = 'błyszczący';
+4 create user 'Anna'@'localhost' identified by '@NNa';

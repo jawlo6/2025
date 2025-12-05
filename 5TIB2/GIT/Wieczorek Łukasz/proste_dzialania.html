@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proste działania</title>
+</head>
+<body>
+    <h1>Proste działania</h1>
+    <form id="calcForm">
+        <label for="liczb1">Liczba 1:</label>
+        <input type="number" id="liczb1" name="liczb1">
+        <br>
+        <label for="liczb2">Liczba 2:</label>
+        <input type="number" id="liczb2" name="liczb2">
+        <br>
+        <button type="button" onclick="oblicz('dodaj')">Dodaj</button>
+        <button type="button" onclick="oblicz('odejmij')">Odejmij</button>
+        <button type="button" onclick="oblicz('pomnóż')">Pomnóż</button>
+        <button type="button" onclick="oblicz('dziel')">Podziel</button>
+    </form>
+    <div id="result"></div>
+    <script src="proste_dzialania.js"></script>
+
+
+</body>
+</html>

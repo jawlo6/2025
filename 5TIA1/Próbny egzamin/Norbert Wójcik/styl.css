@@ -1,0 +1,73 @@
+*{
+    font-family: georgia;
+    color: white;
+}
+
+
+header, footer{
+    background-color: maroon;
+    text-align: center;
+    padding: 2px;
+}
+
+
+main{
+    display: flex;
+}
+
+#lewy, #srodek, #prawy{
+    background-color: lightsalmon;
+    height: 527px;
+}
+
+#lewy, #prawy{
+    width: 15%;
+}
+#srodek{
+    width: 70%;
+    
+
+}
+
+#miniatury{
+    background-color: maroon;
+    height: 70px;
+    display: flex;
+}
+
+main button{
+    background-color: lightsalmon;
+    color: maroon;
+    border: 0;
+    display: block;
+    font-size: 400%;
+    padding-top: 210px;
+}
+
+#srodek img{
+    display: block;
+    margin: auto;
+    padding-top: 45px;
+}
+
+@keyframes skala{
+    from {scale: 100%;}
+    to {scale: 120%;}
+}
+
+#srodek img:hover{
+animation-name: skala;
+animation-duration: 5s;
+}
+
+
+@keyframes miniat{
+    from{padding-left: 50px;}
+    to{padding-left: 0px;}
+}
+
+#miniatury{
+    animation-name: miniat;
+    animation-duration: 4s;
+    
+}

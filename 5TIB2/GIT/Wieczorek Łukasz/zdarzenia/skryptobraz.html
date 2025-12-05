@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamiana obrazów</title>
+</head>
+<body>
+    <img id="obraz1" src="obraz.jpg"  height="400" width="300">
+    <img id="obraz2" src="obraz2.jpg" height="400" width="300">
+    <p id="tekst">Kliknij tekst, aby zamienić obrazy miejscami.</p>
+<script>
+    let tekst = document.getElementById("tekst");
+    tekst.addEventListener("click", function() {
+        let obraz1 = document.getElementById("obraz1");
+        let obraz2 = document.getElementById("obraz2");
+        let zamiana = obraz1.src;
+        obraz1.src = obraz2.src;
+        obraz2.src = zamiana;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wynajem pokoi</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <header>
+        <h1>Pesjonat pod dobrym humorem</h1>
+    </header>
+
+    <div>
+        <div id="lewy", class="bloki">
+            <a href="index.html">GŁÓWNA</a>
+            <p></p>
+            <img src="1.jpeg">
+        </div>
+        <div id="srodek", class="bloki">
+            <a href="cennik.php">CENNIK</a> 
+            <table>
+            <?php
+                $conn = mysqli_connect('localhost','root','','wynajem');
+                 $zapytanie = "SELECT * FROM pokoje";
+
+                $wynik = mysqli_query($conn, $zapytanie);
+                    while($row = mysqli_fetch_row($wynik)){
+                        echo "<tr><td>" . $row[0] . "</td><td>" . $row[1] . "</td><td>" . $row[2] . "</td></tr>";
+                    }
+            ?>
+            </table>
+        </div>
+        <div id="prawy", class="bloki">
+            <a href="kalkulator.html">KALKULATOR</a>
+            <p></p>
+            <img src="3.jpeg">
+        </div>
+    </div>
+
+    <footer style="width: 100%; float: left">
+        <p>Strone opracował: 00000000</p>
+    </footer>
+</body>
+</html>

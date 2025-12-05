@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Stoper</title>
+</head>
+<body>
+
+<p id="timer">0:0:0</p>
+
+<script>
+function stoper() {
+    let hours = 0;
+    let minutes = 0;
+    let seconds = 0;
+
+    let timer = setInterval(function() {
+        seconds++;
+
+        if (seconds > 59) {
+            seconds = 0;
+            minutes++;
+        }
+
+        if (minutes > 59) {
+            minutes = 0;
+            hours++;
+        }
+
+        // wyświetlanie w formacie HH:MM:SS
+        let czas = hours + ":" + minutes + ":" + seconds;
+        document.querySelector("#timer").textContent = czas;
+    }, 1000);
+}
+
+// uruchom stoper
+stoper();
+</script>
+
+</body>
+</html>

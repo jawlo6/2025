@@ -1,0 +1,18 @@
+<head>
+    <title>Test atrybutów</title>
+</head>
+<body>
+
+    <p>To jest akapit testowy. Sprawdź mnie w "Zbadaj element".</p>
+
+    <script>
+        const akapit = document.querySelector('p');
+        if (akapit) {
+            akapit.setAttribute('imie', 'Tomek'); 
+            console.log('Sukces! Atrybut dodany.');
+            console.log(akapit);
+        }
+    </script>
+
+</body>
+</html>

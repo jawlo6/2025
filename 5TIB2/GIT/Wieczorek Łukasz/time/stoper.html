@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopper</title>
+</head>
+<body>
+
+<div id="timer">0:0:0</div>
+
+<script>
+function stoper() {
+    let hours = 0;
+    let minutes = 0;
+    let seconds = 0;
+
+    let timer = setInterval(function() {
+
+        seconds++;
+
+        if (seconds === 60) {
+            seconds = 0;
+            minutes++;
+        }
+
+        if (minutes === 60) {
+            minutes = 0;
+            hours++;
+        }
+
+        let czas = hours + ":" + minutes + ":" + seconds;
+        document.querySelector("#timer").textContent = czas;
+
+    }, 1000);
+}
+
+stoper();
+</script>
+
+</body>
+</html>

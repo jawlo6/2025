@@ -1,0 +1,10 @@
+<button id="przycisk">Dodaj imie</button>
+<p id="demo"></p>
+<script>
+    let button = document.querySelector("#przycisk");
+    button.addEventListener("click",mclick);
+    function mclick(){
+        let name = "Krystian";
+        document.querySelector("#demo").innerHTML+=name+"<br>";
+    }
+</script>

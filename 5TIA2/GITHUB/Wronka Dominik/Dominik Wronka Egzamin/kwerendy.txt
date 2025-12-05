@@ -1,0 +1,9 @@
+1. SELECT DISTINCT wpis from zadania where wpis is not null and dataZadania BETWEEN '2020-07-01' and '2020-07-07'
+
+2. SELECT dataZadania, wpis from zadania where miesiac='lipiec'
+
+3. SELECT miesiac, wpis from zadania where wpis like "S%";
+
+4. UPDATE zadania
+set wpis = 'Wycieczka nad morze'
+where dataZadania = '2020-07-18'

@@ -1,0 +1,49 @@
+<h1>PROSTE DZIA£ANIA</h1>
+
+<form name="formularz" onSubmit="return false;">
+    <i>Podaj pierwsza liczbe: </i><input type="number" name="liczba1" id="liczba1"><br>
+    <i>Podaj druga liczbe: <input type="number" name="liczba2" id="liczba2"></i><br>
+	<button onClick="fun(1);">DODAWANIE</button>
+	<button onClick="fun(2);">ODEJMOWANIE</button>
+	<button onClick="fun(3);">MNOZENIE</button>
+	<button onClick="fun(4);">DZIELENIE</button>
+	<br>
+	<output id="wynik"></output>
+</form>
+<script>
+    function fun(operacja){
+        let liczba1=parseInt(document.querySelector("#liczba1").value);
+        let liczba2=parseInt(document.querySelector("#liczba2").value);
+        console.log( liczba1, liczba2 );
+        if( isNaN(liczba1) || isNaN(liczba2) ){     
+            wynik="Prosze uzupelnic obie liczby";
+        }else{
+            if( liczba2==0 ){
+                wynik="nie dzielimy przez zero";
+            }else{
+                switch( operacja ){
+                    case 1:
+                        wynik=liczba1+liczba2;
+                        break;
+                    case 2:
+                        wynik=liczba1-liczba2;
+                        break;
+                    case 3:
+                        wynik=liczba1*liczba2;
+                        break;
+                    case 4:
+                        wynik=liczba1/liczba2;
+                        break;
+                }
+            }
+        }
+        document.querySelector("#wynik").innerHTML=wynik;
+    }
+</script>
+
+
+
+
+
+
+

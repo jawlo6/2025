@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+  <meta charset="UTF-8">
+ <title>Formatowanie Tekstu CSS - Przykłady</title>
+ <link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Formatowanie tekstu w CSS</h1>
+        <section>
+    <h2>Kolor <span class="customCodeFont">(color)</span></h2>
+     <p class="colorName">Ten tekst ma kolor zdefiniowany nazwą (red).</p>
+  <p class="colorHEX">Ten tekst ma kolor zdefiniowany kodem szesnastkowym HEX (#2ecc71).</p>
+    <p class="colorRGB">Ten tekst ma kolor zdefiniowany przez RGB (0, 0, 255).</p>
+     <p class="colorRGBa">Ten tekst jest półprzezroczysty dzięki RGBA (czarny z opacity 0.5).</p>
+        </section>
+        <section>
+     <h2>Wyrównanie <span class="customCodeFont">(text-align)</span></h2>
+        <p class="txtAlgn_Left">Tekst wyrównany do lewej (domyślnie).</p>
+   <p class="txtAlgn_Center">Tekst wyśrodkowany (center).</p>
+            <p class="txtAlgn_Right">Tekst wyrównany do prawej (right).</p>
+    <div class="txtAlgn_Justify">
+                <strong>Justowanie (justify):</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Tekst jest rozciągnięty od lewej do prawej krawędzi.
+            </div>
+        </section>
+
+        <section>
+      <h2>Wyrównanie w pionie <span class="customCodeFont">(vertical-align)</span></h2>
+     <p class="verticalAlign_Box">
+                Tekst podstawowy, <span class="vertAlgn_Super">indeks górny (super)</span> oraz tekst podstawowy.
+            </p>
+<p class="verticalAlign_Box">
+      Wzór chemiczny wody: H<span class="vertAlgn_Sub">2</span>O (indeks dolny - sub).
+</p>
+<p class="verticalAlign_Box">
+Tekst wyrównany do środka elementu obok: <span class="vertAlgn_Mid"></span> (middle).
+</p>
+</section>
+        <section>
+<h2>Dekoracje tekstu <span class="customCodeFont">(text-decoration)</span></h2>
+<p class="txtDecor_Underline">Tekst podkreślony (underline).</p>
+<p class="txtDecor_Overline">Tekst z linią nad tekstem (overline).</p>
+<p class="txtDecor_LineThrough">Tekst przekreślony (line-through).</p>
+<p class="txtDecor_UnderlineCustomExmpl">Podkreślenie falowane w kolorze czerwonym.</p>
+<p><a class="txtDecor_None">Link pozorny bez domyślnego podkreślenia (none)</a>.</p>
+        </section>
+        <section>
+<h2>Transformacje <span class="customCodeFont">(text-transform)</span></h2>
+<p class="txtTrans_Upper">ten tekst w kodzie jest mały, a wyświetla się duży (uppercase).</p>
+<p class="txtTrans_Lower">TEN TEKST W KODZIE JEST DUŻY, A WYŚWIETLA SIĘ MAŁY (LOWERCASE).</p>
+<p class="txtTrans_Cap">każde słowo zaczyna się wielką literą (capitalize).</p>
+        </section>
+
+        <section>
+<h2>Odstępy <span class="customCodeFont">(letter-spacing, word-spacing, line-height)</span></h2>
+<p class="letterSpacing">Zwiększone odstępy między literami.</p>
+<p class="wordSpacing">Zwiększone odstępy między wyrazami w zdaniu.</p>
+<p class="lineHeight_Exmpl">
+<strong>Zwiększona interlinia (line-height):</strong><br>
+To jest przykładowy tekst, który ma zwiększoną wysokość linii.<br>
+Dzięki temu tekst jest bardziej czytelny i "oddycha",<br>
+szczególnie przy dłuższych akapitach.
+</p>
+</section>
+
+<section>
+<h2>Cienie <span class="customCodeFont">(text-shadow)</span></h2>
+<p class="txtShadow_">Prosty, szary cień pod tekstem.</p>
+<div style="margin: 15px 0;">
+<span class="txtShadow_Glow">EFEKT NEONU</span>
+</div>
+<div><span class="txtShadow_3D">TEKST 3D</span></div>
+</section>
+</body>
+</html>

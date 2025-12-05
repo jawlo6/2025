@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+
+<div id="kontyner1">
+
+    <section id="pierwszy">
+        <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku">
+        <br>
+        <input type="radio" id="blur" name="rodzaj" value="blur"/>
+        <label id="blur">Blur</label>
+        
+        
+        <input type="radio" id="sepia" name="rodzaj" value="sepia"/>
+        <label id="blur">Sepia</label>
+
+        <input type="radio" id="negatyw" name="rodzaj" value="negatyw"/>
+        <label id="blur">Negatyw</label>
+        <br>
+        <button onclick="zastosujEfekt()" id="zastosuj1">Zastosuj</button>
+    </section>
+
+    <section id="drugi">
+        <img src="pomarancza.jpg" alt="drzewo pomarańczy">
+        <br>
+        <button onclick="kolor()" id="kolorowy">Kolorowy</button>
+        <button onclick="czarnoBialy()" id="czarno-bialy">Czarno-biały</button>
+    </section>
+</div>
+
+<div id="kontyner2">
+    <section id="trzeci">
+        <img src="owoce.jpg" alt="Kosz pełen owoców">
+        <br>
+        <input type="range" min="0" max="100" value="100"/>
+        <br>
+        <button id="zastosuj3">Zastosuj</button>
+    </section>
+
+    <section id="czwarty">
+        <img src="zolw.jpg" alt="Żółw w wodzie"/>
+        <br>
+        <input type="range" id="przezroczystosc" min="0" max="250"/>
+        <br>
+        <button onclick="zastosujPrzezroczystosc()" id="zastosuj4">Zastosuj</button>
+    </section>
+    </div>
+
+    <footer>
+        <p><a href="http://www.css.com/" target="_blank">Zobacz inne efekty obrazu</a></p>
+        <p>Stronę wykonał: Mateusz Panek</p>
+    </footer>
+
+
+    <script>
+        function zastosujEfekt() {
+            const zdjecie = document.querySelector("img[src='pszczola.jpg']");
+            const efekty = document.querySelectorAll("input[name='rodzaj']");
+            efekty.forEach((e)) => {
+                if(e.checked) {
+                    zdjecie.style.filter = e.value;
+                }
+            };
+        }
+
+        function kolor() {
+            const zdjecie = document.querySelector("img[src='pomarancza.jpg']");
+            zdjecie.style.filter = "none";
+        }
+
+        function czarnoBialy() {
+            const zdjecie = document.querySelector("img[src='pomarancza.jpg']");
+            zdjecie.style.filter = "grayscale(100%)";
+        }
+
+        function zastosujPrzezroczystosc {
+            const zdjecie = document.querySelector("img[src='owoce.jpg']");
+            const wartosc = document.getElementById("przezroczystosc");
+            zdjecie.style.filter = "opacity("wartosc.value + %;")";
+        }
+            
+
+        
+    </script>
+
+
+</body>
+</html>

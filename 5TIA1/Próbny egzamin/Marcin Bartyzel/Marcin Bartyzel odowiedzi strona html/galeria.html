@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <header>
+        <h1> Galeria obrazów</h1>
+    </header>
+    <div class="lewy">
+        <img src="zdjecie.jpg" alt="zdjecie dnia">
+        <h3> zdjecia opublikowali</h3>
+        <table>
+            <tr> 
+                <td>Anna Poreba</td>
+                <td>10 zdjec</td>
+            </tr>
+            <tr>
+                <td>Krzysztof Wasilewski</td>
+                <td>12 zdjec</td>
+            </tr>
+            <tr>
+                <td>Monika Kowaslka</td>
+                <td>4 zdjecia</td>
+            </tr>
+        </table>
+    </div>
+    <div class="prawy">
+        <input type="button" value="prev" onclick="poprzednieZdjecie()">
+        <img src="1.jpg" alt="galeria" class="duze">
+        <input type="button" value="next" onclick="KolejneZdjecie()">
+        <hr>
+        <img src="1.jpg" alt="miniatura" class="miniatura" onclick="zmianaZdjecia('1.jpg')">
+        <img src="2.jpg" alt="miniatura" class="miniatura" onclick="zmianaZdjecia('2.jpg')">
+        <img src="3.jpg" alt="miniatura" class="miniatura" onclick="zmianaZdjecia('3.jpg')">
+        <img src="4.jpg" alt="miniatura" class="miniatura" onclick="zmianaZdjecia('4.jpg')">
+        <img src="5.jpg" alt="miniatura" class="miniatura" onclick="zmianaZdjecia('5.jpg')">
+    </div>
+        <script>
+        var obeceZdjecie =0;
+        var zdjecia=['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg']
+
+        function poprzednieZdjecie(){
+            obeceZdjecie(obeceZdjecie - 1 + zdjecia.length) % zdjecia.length;
+            nowezdjecie();
+        }
+        function KolejneZdjecie(){
+            obeceZdjecie(obeceZdjecie + 1)% zdjecia.length;
+            nowezdjecie();
+        }
+        function zmianaZdjecia(nazwa){
+            obeceZdjecie(zdjecia.indexOf(nazwa));
+            nowezdjecie();
+        }        
+        
+    </script>
+    <footer>
+        <a href=" https://pixabay.com " target="_blank">wiecej obrazkow</a>
+        <p>Galerie wykonał: Marcin Bartyzel</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+*{
+    font-family: tahoma;
+}
+
+header{
+    display: flex;
+    background-color: #7da453;
+    color: white;
+    height: 120px;
+}
+#pierwszy, #drugi{
+   width: 40%;
+}
+
+
+
+#trzeci{
+    width: 20%;
+}
+
+
+#blok_kalendzaża{
+    background-color: #aed581;
+    width: 200px;
+    height: 100px;
+    margin: 7px;
+    border: 1px solid #7da453;
+}
+
+#blok_kalendaża:hover{
+    background-color: #7da453;
+    color: white;
+}
+
+
+footer{
+    background-color: #7da453;
+    color: white;
+    padding: 5px;
+}
+
+h5{
+    text-align: center;
+}
+
+form{
+    padding: top 50px; ;
+}

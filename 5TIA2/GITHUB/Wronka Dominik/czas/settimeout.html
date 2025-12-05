@@ -1,0 +1,10 @@
+<div id="kontener">Rodzic</div>
+<script>
+    function myFunc(){
+       let kontener = document.getElementById("kontener");
+       let akapit = document.createElement('p');
+       akapit.textContent = "nowy akapit";
+       kontener.appendChild(akapit);
+    }
+    setTimeout(myFunc, 5000);
+</script>

@@ -1,0 +1,20 @@
+<form>
+    <label> Podaj liczbe
+        <input type="number" name="fname" id="num"><button id="myButton">Wyślij</button>
+    </label>
+</form>
+<p id="wynik"></p>
+<script>
+    document.querySelector("#myButton").addEventListener("click",function(e){
+        e.preventDefault();
+        const MIN=0, MAX = 10; var result;
+        var number = document.querySelector("#num").value;
+        if(number!="" && number >= MIN && number <=MAX)
+        {
+            result = "Dane są poprawne";
+        } else {
+            result = "Dane są niepoprawne";
+        }
+        document.querySelector("#wynik").innerHTML = result;
+    })
+</script>

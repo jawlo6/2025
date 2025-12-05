@@ -1,0 +1,63 @@
+*{
+    font-family: serif;
+}
+#pierwszy,#drugi{
+    background-color: darkcyan;
+    color:white;
+    height: 100px;
+    width: 50%;
+    display: inline;
+    letter-spacing: 15px;
+    float:left;
+    
+}
+.blok{
+    background-color: azure;
+    width: 30%;
+    margin: 1%;
+    box-shadow: 4px 4px 8px dimgray;
+    float: left;
+}
+
+.zdjblok{
+    width: 100%;
+}
+
+p,h2,h3{
+    margin:15px;
+}
+a{
+    color: white;
+}
+
+h5{
+    background-color: teal;
+    width: 100%;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h5:hover{
+    background-color: lightseagreen;
+}
+
+#cytaty{
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-style: italic;
+}
+
+#c2,#c3{
+    display: none;
+}
+
+footer{
+    background-color: darkcyan;
+    color:white;
+}

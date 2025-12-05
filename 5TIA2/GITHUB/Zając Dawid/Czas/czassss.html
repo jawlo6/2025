@@ -1,0 +1,16 @@
+<img id="obr1" src="https://i.redd.it/sxbhlnn686pb1.jpg" width="200">
+<img id="obr2" src="https://esnitu.wordpress.com/wp-content/uploads/2015/02/10472669_717020295060191_1367613031934631973_n.jpg" width="200">
+
+<script>
+    function swapImages() {
+        let obr1 = document.getElementById("obr1");
+        let obr2 = document.getElementById("obr2");
+
+       
+        let temp = obr1.getAttribute("src");
+        obr1.setAttribute("src", obr2.getAttribute("src"));
+        obr2.setAttribute("src", temp);
+    }
+
+    setInterval(swapImages, 5000);
+</script>

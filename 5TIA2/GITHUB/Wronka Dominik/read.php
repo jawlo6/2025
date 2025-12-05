@@ -1,0 +1,4 @@
+<?php
+readfile("plik.txt")
+?>
+

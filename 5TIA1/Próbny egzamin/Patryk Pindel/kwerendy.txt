@@ -1,0 +1,4 @@
+Zapytanie 1 select imie,nazwisko from osoby where dataUr > '2000-12-31';
+Zapytanie 2 select DISTINCT miasto from adresy order by miasto asc;
+Zapytanie 3 3. SELECT imie, nazwisko, telefony.numer FROM osoby JOIN telefony ON osoby.id = telefony.Osoby_id;
+Zapytanie 4 alter table adresy add numerMieszkania int after numer;

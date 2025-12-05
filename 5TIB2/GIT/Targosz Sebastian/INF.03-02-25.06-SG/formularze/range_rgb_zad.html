@@ -1,0 +1,21 @@
+R: <input type="range" min="0" max="255" id="r"><br>
+G: <input type="range" min="0" max="255" id="g"><br>
+B: <input type="range" min="0" max="255" id="b"><br>
+
+<p id="t">Kolorowy tekst</p>
+
+<script>
+function zmienKolor() {
+    let R = r.value;
+    let G = g.value;
+    let B = b.value;
+
+    let kolor = `rgb(${R}, ${G}, ${B})`;
+    t.style.color = kolor;
+    t.textContent = "Kolor: " + kolor;
+}
+
+r.oninput = zmienKolor;
+g.oninput = zmienKolor;
+b.oninput = zmienKolor;
+</script>

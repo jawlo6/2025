@@ -1,0 +1,4 @@
+kw1:SELECT model from produkt;
+kw2:SELECT buty.model, nazwa, cena, produkt.nazwa_pliku FROM buty JOIN produkt ON produkt.model = buty.model;
+kw3:SELECT buty.nazwa, buty.cena, produkt.kolor, produkt.kod_produktu, produkt.material, produkt.nazwa_pliku FROM buty JOIN produkt ON produkt.model = buty.model WHERE buty.model = "P-59-03";
+kw4:INSERT INTO kategorie VALUES ('','Sandały');

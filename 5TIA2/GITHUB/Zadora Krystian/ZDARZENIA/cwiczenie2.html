@@ -1,0 +1,21 @@
+<html>
+    <button onclick id="klik">Zmien kolor</button>
+    <p id="imie">Krystian</p>
+
+    <style>
+        #imie{
+            color:blue;
+        }
+    </style>
+    <script>
+     let button=document.querySelector("#klik");
+        button.addEventListener("click", mclick);
+
+        function mclick(){
+            let imie=document.querySelector("#imie")
+            imie.style.color="green";
+        }
+     
+
+    </script>
+</html>

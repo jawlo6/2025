@@ -1,0 +1,12 @@
+<p> setTimeout() - uruchamia podana funkcje po okreslonym czasie</p>
+
+<script>
+    function myFunc(){
+        akapit = document.createElement("p");
+        akapit.innerHTML = "To jest tekst";
+        document.body.appendChild(akapit)
+        setTimeout(myFunc, 5000);
+    }
+    setTimeout(myFunc, 5000); // 5sec
+
+</script>

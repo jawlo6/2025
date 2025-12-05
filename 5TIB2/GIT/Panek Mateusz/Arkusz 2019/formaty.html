@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatowanie</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Formatowanie dokumentów HTML</h1>
+    </header>
+
+    <nav>
+        <section class="panel1">
+            <h2>Przykład listy - hobby</h2>
+            <ul>
+                <li>muzyka</li>
+                <li>turystyka</li>
+                <ol>
+                    <li>góry</li>
+                    <li>jeziora</li>
+                    <li>na rowerze</li>
+                </ol>
+                <li>książki</li>
+            </ul>
+        </section>
+
+        <section class="panel2">
+            <h2>Przykład tabeli - rozkład dnia</h2>
+            <table>
+                <tr>
+                    <th>Pora dnia</th>
+                    <th>obowiązki</th>
+                </tr>
+                <tr>
+                    <td>rano</td>
+                    <td>nauka</td>
+                </tr>
+                <tr>
+                    <td>południe</td>
+                    <td>zajęcia dodatkowe</td>
+                </tr>
+                <tr>
+                    <td>popołudnie</td>
+                    <td rowspan="2">moje hobby</td>
+                </tr>
+                <tr>
+                    <td>wieczór</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="panel3">
+            <img src="napisy.png" alt="technologia web">
+        </section>
+    </nav>
+
+    <main>
+        <p>Podaj rozmiar tekstu w procentach <input type="number"
+        id="rozmiar" id="rozmiar">%</p>
+
+        <select id="elementy">
+            <option value="normal">prosty</option>
+            <option value="italic">kursywa</option>
+        </select>
+
+        <p>Jakim kolorem chcesz sformatować tekst? Wybierz przycisk<br>
+        <button id="czerwony"></button>
+        <button id="zielony"></button>
+        <button id="niebieski"></button>
+        </p>
+
+        <p id="formatowanie">To jest przykład paragrafu, który może być dowolnie formatowany
+            przez JavaScript</p>
+    </main>
+
+    <footer>
+        <p>Formatowaniem tekstu zajmował się: 00000000000</p>
+        <a href="https://formatowanie.pl/">Odwiedź także</a>
+    </footer>
+    
+
+    <script>
+        
+const paragraph = document.getElementById('formatowanie');
+const redButton = document.getElementById('czerwony');
+const greenButton = document.getElementById('zielony');
+const blueButton = document.getElementById('niebieski');
+const fontSizeInput = document.getElementById('rozmiar');
+const fontStyleSelect = document.getElementById('elementy');
+
+function updateParagraphStyle(color) {
+    paragraph.style.color = color;
+    const fontSizeValue = fontSizeInput.value;
+    if (fontSizeValue) {
+        paragraph.style.fontSize = `${fontSizeValue}%`;
+    }
+    const fontStyleValue = fontStyleSelect.value;
+    if (fontStyleValue) {
+        paragraph.style.fontStyle = fontStyleValue;
+    }
+}
+
+redButton.addEventListener('click', () => {
+    updateParagraphStyle('red');
+});
+
+greenButton.addEventListener('click', () => {
+    updateParagraphStyle('green');
+});
+
+blueButton.addEventListener('click', () => {
+    updateParagraphStyle('blue');
+});
+fontSizeInput.addEventListener('input', () => {
+    if (paragraph.style.color) { 
+        updateParagraphStyle(paragraph.style.color);
+    }
+});
+
+fontStyleSelect.addEventListener('change', () => {
+    if (paragraph.style.color) { 
+        updateParagraphStyle(paragraph.style.color);
+    }
+});
+
+    </script>
+</body>
+</html>

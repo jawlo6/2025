@@ -1,0 +1,37 @@
+<div id="kolorowany-element">Element range - ten kolor się zmieni</div>
+
+<style>
+    #kolorowany-element {
+        background-color: rgb(120, 0, 0); 
+        padding: 15px; 
+        margin-bottom: 20px;
+        color: white;
+        font-family: sans-serif;
+    }
+</style>
+
+<form>
+    <label>
+        Ustaw kolor czerwony:<br>
+        0
+        <input type="range" min="0" max="255" value="120" id="zakres">
+        255
+    </label>
+</form> 
+<br>
+<p id="wynik"></p>
+
+<script>
+    let zakres = document.querySelector("#zakres");
+    let kolorowanyElement = document.querySelector("#kolorowany-element");
+    let wynik = document.querySelector("#wynik");
+    zakres.addEventListener("input", wybierz);
+
+    function wybierz() {
+        const rValue = zakres.value;
+        
+        kolorowanyElement.style.backgroundColor = `rgb(${rValue}, 0, 0)`;
+        wynik.textContent = `Aktualna wartość koloru (R): ${rValue}`;
+    }
+    wybierz(); 
+</script>

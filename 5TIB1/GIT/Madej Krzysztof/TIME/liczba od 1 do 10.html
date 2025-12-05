@@ -1,0 +1,19 @@
+<p id="wynik"></p>
+
+<script>
+    let liczba = 1;
+
+    function wypisz() {
+        let miejsce = document.getElementById("wynik");
+
+        miejsce.innerHTML += liczba + "<br>"; 
+
+        liczba++; 
+        if (liczba > 10) {
+            miejsce.innerHTML = ""; 
+            liczba = 1; 
+        }
+    }
+
+    setInterval(wypisz, 1000); 
+</script>

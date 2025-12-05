@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Galeria</title>
+        <link rel="stylesheet" href="styl2.css">
+    </head>
+    <body>
+        <header>
+            <h1>Galeria obrazów</h1>
+        </header>
+
+        <div id="lewy">
+            <img src="zdjecie.jpg" alt="zdjecie dnia">
+            <h3>Zdjecia opublikowali</h3>
+            <table>
+                <tr>
+                    <td>Anna Porada</td>
+                    <td>10 zdjęć</td>
+                </tr>
+                <tr>
+                    <td>Krzysztof Wasilewski</td>
+                    <td>12 zdjęć</td>
+                </tr>
+                <tr>
+                    <td>Monika Kowalska</td>
+                    <td>4 zdjęcia</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="prawy">
+            <input type="button" value="prev" onclick="prevImage()">
+            <img id="galleryImage" scr="1.jpg" alt="Galeria">
+            <input type="button" value="next" onclick="nextImage()">
+            <hr>
+            <img src="1.jpg" alt="miniatura" class="miniatura" oneclick="changeImage('1.jpg')">
+            <img src="2.jpg" alt="miniatura" class="miniatura" oneclick="changeImage('2.jpg')">
+            <img src="3.jpg" alt="miniatura" class="miniatura" oneclick="changeImage('3.jpg')">
+            <img src="4.jpg" alt="miniatura" class="miniatura" oneclick="changeImage('4.jpg')">
+            <img src="5.jpg" alt="miniatura" class="miniatura" oneclick="changeImage('5.jpg')">
+        </div>
+
+        <script>
+            var currentImageIndex =0;
+            var imageArray = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'];
+
+            function prevImage(){
+                currentImageIndex = (currentImageIndex - 1 + imageArray.length) % imageArray.length;
+                updateImage();
+            }
+            function nextImage(){
+                currentImageIndex = (currentImageIndex + 1) % imageArray.length
+                updateImage();
+            }
+            function changeImage(imageName){
+                currentImageIndex = imageArray.index0f(imageName);
+                updateImage();
+                }
+            function updateImage(){
+                var galleryImage = document.getElementById('galleryImage');
+                galleryImage.src = imageArray[currentImageIndex];
+            }
+        </script>
+
+        <footer>
+            <p>Galerię wykonał</p>Cyprian Gościński</p>
+        </footer>
+    </body>
+</html>

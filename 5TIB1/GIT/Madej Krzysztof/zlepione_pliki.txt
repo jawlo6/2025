@@ -1,0 +1,1827 @@
+
+============================================================
+PLIK: Main.js
+============================================================
+
+const replies = [
+    "Hej, świetnie!",
+    "Nie mogę się doczekać!",
+    "Co jeszcze planujemy?",
+    "Może później?",
+    "Dobra decyzja!",
+    "Zgadza się.",
+    "Brzmi dobrze.",
+    "Ciekawy pomysł!",
+    "Spróbujmy!"
+];
+
+function sendMessage() {
+    const messageInput = document.getElementById('messageInput');
+    const messageText = messageInput.value;
+    const chat = document.querySelector('#chat');
+    const newMessage = document.createElement('div');
+    newMessage.classList.add('message', 'jolanta');
+    newMessage.innerHTML = "<img src='jolka1.jpg' alt='Jolanta Nowak'><p>" + messageText + "</p>";
+    chat.appendChild(newMessage);
+    newMessage.scrollIntoView();
+    messageInput.value = '';
+}
+
+function generateRandomReply() {
+    const randomIndex = Math.floor(Math.random() * replies.length);
+    const replyText = replies[randomIndex];
+    const chat = document.querySelector('#chat');
+    const newMessage = document.createElement('div');
+    newMessage.classList.add('message', 'krzysztof');
+    newMessage.innerHTML = "<img src='Krzysiek1.jpg' alt='Krzysztof Łukasiński'><p>" + replyText + "</p>";
+    chat.appendChild(newMessage);
+    newMessage.scrollIntoView();
+}
+
+
+============================================================
+PLIK: argumenty funkcji.php
+============================================================
+
+<?php
+function familyname($fname) {
+echo"$fname Refsnes.<br>";
+}
+familyName("Jani");
+familyName("Hege");
+familyName("Stale");
+?>
+
+
+
+============================================================
+PLIK: array_pop.php
+============================================================
+
+<?php
+$a=array("red","green","blue");
+array_pop($a);
+print_r($a);
+?>
+
+
+
+============================================================
+PLIK: array_push.php
+============================================================
+
+<?php
+$a=array("red","green");
+array_push($a,"blue","yellow");
+print_r($a);
+?>
+
+
+
+============================================================
+PLIK: array_shift.php
+============================================================
+
+<?php
+$a=array("red","green");
+array_push($a,"blue","yellow");
+print_r($a);
+?>
+
+
+
+============================================================
+PLIK: array_unshift.php
+============================================================
+
+<?php
+$kolory=array("b"=>"green","c"=>"blue");
+echo array_unshift($kolory,"red"). "<br>";
+print_r($kolory);
+?>
+
+
+
+============================================================
+PLIK: biblioteka.php
+============================================================
+
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BIBLIOTEKA SZKOLNA</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+    <header>
+        <h2>STRONA BIBLIOTEKI SZKOLNEJ WIEDZAMIN</h2>
+    </header>
+    <section>
+        <h3>Nasze dzisiejsze propozycje:</h3>
+        <table>
+            <tr>
+                <th>Autor</th>
+                <th>Tytuł</th>
+                <th>Katalog</th>
+            </tr>
+        </table>
+    </section>
+    <main>
+        <article>
+            <img src="ksiazka1.jpg" alt="okładka książki">
+            <p>Według różnych podań najpaskudniejsza ropucha nosi w głowie piękny, cenny klejnot.</p>
+        </article>
+        <article>
+            <img src="ksiazka2.jpg" alt="okładka książki">
+            <p>Panna Stefcia i Maryla nie są to zbyt grzeczne damy, nawet nie słuchają mamy...</p>
+        </article>
+        <article>
+            <img src="ksiazka3.jpg" alt="okładka książki">
+            <p>Ratuj mnie, przyjacielu, w ostatniej potrzebie: Kocham piękną Irenę. Rodzice i ona...</p>
+        </article>
+    </main>
+    <footer>Stronę wykonał: krzysiek</footer>
+</body>
+
+</html>
+
+
+============================================================
+PLIK: break.php
+============================================================
+
+<?php
+for ( $i=0; $i<10; $i++){
+echo "liczba: $i <br>";
+if( $i ==5)
+break;
+}
+echo "koniec pętli";
+?>
+
+
+
+============================================================
+PLIK: continue.php
+============================================================
+
+<?php
+for ( $i=0; $i<10; $i++) {
+
+if( $i ==5)
+continue;
+echo "liczba: $i <br>";
+}
+echo "koniec pętli";
+?>
+
+
+============================================================
+PLIK: data.php
+============================================================
+
+<?php
+$rok = date("Y");
+$miesiac = date("m");
+$dzien = date("d");
+
+
+echo "$dzien/$miesiac/$rok <br>";
+
+
+echo "Today is " . date("Y/m/d") . "<br>";
+echo "Today is " . date("l") . "<br>";
+?>
+
+
+
+============================================================
+PLIK: deafault argument value.php
+============================================================
+
+<?php
+
+function setHeight($minheight = 50){
+    echo "the height is : $minheight <br>";
+}
+setHeight(350);
+setHeight();
+?>
+
+
+
+
+============================================================
+PLIK: destruktor.php
+============================================================
+
+<?php
+class Fruit {
+    public $name;
+    public $color;
+
+    function __construct($name) {
+        $this->name = $name;
+    }
+
+    function __destruct() {
+        echo "The fruit is {$this->name}.";
+    }
+}
+
+$apple = new Fruit("Apple");
+?>
+
+
+
+============================================================
+PLIK: dodawanie elementów.php
+============================================================
+
+<?php
+$a1=array(0,1,2,3);
+$a2=array(5,6);
+array_splice($a1,1,0,$a2);
+print_r($a1);
+?>
+
+
+
+============================================================
+PLIK: dziedziczenie.php
+============================================================
+
+<?php
+class Fruit {
+    public $name;
+    public $color;
+
+    public function __construct($name, $color) {
+        $this->name = $name;
+        $this->color = $color;
+    }
+
+    protected function intro() {
+        echo "The fruit is {$this->name} and the color is {$this->color}.";
+    }
+}
+?>
+
+
+
+
+============================================================
+PLIK: dziedziczenie2.php
+============================================================
+
+<?php
+class Strawberry extends Fruit {
+    public function message() {
+        echo "Am I a fruit or a berry? ";
+    }
+}
+
+// Try to call all three methods from outside class
+$strawberry = new Strawberry("Strawberry", "red"); // OK. __construct() is public
+$strawberry->message(); // OK. message() is public
+$strawberry->intro(); // ERROR. intro() is protected
+?>
+
+
+
+============================================================
+PLIK: dziedziczenie3 samochody.php
+============================================================
+
+<?php
+class Vehicle {
+    public $brand;
+
+    public function __construct($brand) {
+        $this->brand = $brand;
+    }
+
+    protected function odglos() {
+        echo "Pojazd $this->brand wydaje dźwięk<br>";
+    }
+}
+
+class Car extends Vehicle {
+    public $model;
+
+    public function __construct($brand, $model) {
+        $this->brand = $brand;
+        $this->model = $model;
+    }
+
+    public function message() {
+        echo "Czy jestem pojazdem czy samochodem?<br>";
+    }
+}
+
+$car = new Car("BMW", "toyota");
+
+
+$car->message();   
+$car->odglos();    
+?>
+
+
+
+============================================================
+PLIK: fgets.php
+============================================================
+
+<?php
+$myfile = fopen("webdictionary.txt","r")
+or die("unable to open the file");
+echo fgets($myfile);
+fclose($myfile); //odczytuje wiersz
+
+?>
+
+
+
+============================================================
+PLIK: fgetscsv.php
+============================================================
+
+<?php
+$row = 1;
+if (($handle = fopen("test.csv", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+        $num = count($data);
+        echo "<p> $num fields in line $row: <br /></p>\n";
+        $row++;
+        for ($c = 0; $c < $num; $c++) {
+            echo $data[$c] . "<br />\n";
+        }
+    }
+    fclose($handle);
+}
+?>
+
+
+
+============================================================
+PLIK: fread.php
+============================================================
+
+<?php
+$myfile = fopen("plik.txt");
+?>
+
+
+
+============================================================
+PLIK: funkcja anonimowa.php
+============================================================
+
+<?php
+
+
+echo preg_replace_callback('~-([a-z])~', function ($match) {
+    return strtoupper($match[1]);
+}, 'hello-world');
+// outputs helloWorld
+?>
+
+
+
+============================================================
+PLIK: funkcja bez parametru.php
+============================================================
+
+<?php
+
+
+function setHeight($minheight = 50){
+    echo "the height is : $minheight <br>";
+}
+setHeight(350);
+setHeight();
+?>
+
+
+
+============================================================
+PLIK: funkcja count.php
+============================================================
+
+<?php
+$cars = array("Volvo", "BMW", "Toyota");
+echo "Size of array cars = " . count($cars);
+?>
+
+
+
+============================================================
+PLIK: funkcja dodająca 2 liczby.php
+============================================================
+
+<?php
+function add($a, $b) {
+    return $a + $b;
+}
+
+
+echo add(4, 7);
+?>
+
+
+
+============================================================
+PLIK: funkcja dodająca dwie liczby.php
+============================================================
+
+<?php
+function add($a, $b) {
+    return $a + $b;
+}
+
+echo add(4, 7); 
+?>
+
+
+
+============================================================
+PLIK: funkcja family.php
+============================================================
+
+<?php
+function familyname($fname) {
+echo"$fname Refsnes.<br>";
+}
+familyName("Jani");
+familyName("Hege");
+familyName("Stale");
+?>
+
+
+
+============================================================
+PLIK: funkcja filesize.php
+============================================================
+
+<?php
+
+
+$filename = 'aaa.txt';
+
+
+echo $filename . ":" . filesize($filename) . " bytes";
+?>
+
+
+
+============================================================
+PLIK: funkcja i return.php
+============================================================
+
+<?php
+function add_some_extra(&$string){
+    $string .= 'and something extra. ';
+
+
+}
+$str = "this is a string,";
+add_some_extra($str);
+echo $str;
+?>
+
+
+
+============================================================
+PLIK: funkcja strzałkowa.php
+============================================================
+
+<?php
+
+
+$y = 1;
+$fn1 = fn($x) => $x + $y;
+?>
+
+
+
+============================================================
+PLIK: funkcja.php
+============================================================
+
+<?php
+function writeMsg(){
+    echo "Hello world!";
+}
+
+
+writeMsg();
+?>
+
+
+
+============================================================
+PLIK: fwrite.php
+============================================================
+
+<?php
+$myfile = fopen("newfile.txt","w")
+or die("unable to open the file!");
+$txt = "john doe\n";
+fwrite($myfile, $txt);
+fclose($myfile); //utworzenie nowego pliku i zapis funkcją fwrite
+?>
+
+
+
+============================================================
+PLIK: goto.php
+============================================================
+
+<?php
+
+
+goto a;
+echo "pierwszy tekst";
+
+
+a:
+echo "drugi tekst";
+?>
+
+
+
+============================================================
+PLIK: if else.php
+============================================================
+
+<?php
+$hour = date("H"); //get current time
+
+
+if ($hour < "20") {
+    echo "have a good day!";
+} else {
+    echo "have a good night!";
+}
+?>
+
+
+
+============================================================
+PLIK: if.php
+============================================================
+
+<?php
+$a = 2;
+$b=1;
+if ($a > $b) {
+    echo "a is bigger than b";
+}
+?>
+
+
+
+============================================================
+PLIK: javascirpt.js
+============================================================
+
+const odpowiedzi = [
+    "Świetnie!",
+    "Kto gra główną rolę?",
+    "Lubisz filmy Tego reżysera?",
+    "Będę 10 minut wcześniej",
+    "Może kupimy sobie popcorn?",
+    "Ja wolę Colę",
+    "Zaproszę jeszcze Grześka",
+    "Tydzień temu też byłem w kinie na Diunie",
+    "Ja funduję bilety"
+];
+
+function wyslij() {
+    const messageInput = document.getElementById('wiadomosc');
+    const chat = document.getElementById('chat');
+
+    const jolkaDiv = document.createElement('div');
+    jolkaDiv.classList.add('jolka');
+
+    const jolkaImg = document.createElement('img');
+    jolkaImg.src = 'Jolka.jpg';
+    jolkaImg.alt = 'Jolanta Nowak';
+
+    const jolkaP = document.createElement('p');
+    jolkaP.textContent = messageInput.value;
+
+    jolkaDiv.appendChild(jolkaImg);
+    jolkaDiv.appendChild(jolkaP);
+    chat.appendChild(jolkaDiv);
+
+    chat.scrollTop = chat.scrollHeight;
+
+    messageInput.value = '';
+}
+
+function generuj() {
+    const randomIndex = Math.floor(Math.random() * odpowiedzi.length);
+    const randomResponse = odpowiedzi[randomIndex];
+    const chat = document.getElementById('chat');
+
+    const krzysiekDiv = document.createElement('div');
+    krzysiekDiv.classList.add('krzysiek');
+
+    const krzysiekImg = document.createElement('img');
+    krzysiekImg.src = 'Krzysiek.jpg';
+    krzysiekImg.alt = 'Krzysztof Łukasiński';
+
+    const krzysiekP = document.createElement('p');
+    krzysiekP.textContent = randomResponse;
+
+    krzysiekDiv.appendChild(krzysiekImg);
+    krzysiekDiv.appendChild(krzysiekP);
+    chat.appendChild(krzysiekDiv);
+
+    chat.scrollTop = chat.scrollHeight;
+}
+
+
+============================================================
+PLIK: json_decode.php
+============================================================
+
+<?php
+$json = '{
+    "a":1,
+    "b":2,
+    "c":3,
+    "d":4,
+    "e":5
+}';
+
+
+var_dump(json_decode($json));
+var_dump(json_decode($json, true)); // przekształca json string w zmienną PHP
+?>
+
+
+============================================================
+PLIK: json_encode.php
+============================================================
+
+son_encode() odwrotne- działanie
+<?php
+$arr = array(
+    'a' => 1,
+    'b' => 2,
+    'c' => 3,
+    'd' => 4,
+    'e' => 5
+);
+
+
+echo json_encode($arr); // przekształca zmienna w json string
+?>
+
+
+
+============================================================
+PLIK: kasowanie ciasteczka.php
+============================================================
+
+<?php
+$cookie_name = "user";
+
+
+setcookie($cookie_name, "", time() - 3600);
+
+
+if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+} else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name];
+}
+?>
+
+
+
+============================================================
+PLIK: konstruktor.php
+============================================================
+
+<?php
+class Fruit {
+    public $name;
+    public $color;
+
+    function __construct($name) {
+        $this->name = $name;
+    }
+
+    function get_name() {
+        return $this->name;
+    }
+}
+
+$apple = new Fruit("Apple");
+echo $apple->get_name();
+?>
+
+
+
+============================================================
+PLIK: kwerendy.txt
+============================================================
+
+Zapytanie 1: INSERT INTO `logowanie`(`id`, `nick`, `haslo`) VALUES (3, 'Jeremi','Jer123'); 
+Zapytanie 2: SELECT FLOOR(AVG(rokUr)) AS "Średni rok urodzenia" FROM uczestnicy;
+Zapytanie 3: SELECT imie, nazwisko, nick, haslo FROM uczestnicy JOIN logowanie ON logowanie_id = logowanie.id WHERE imie LIKE "J%";
+Zapytanie 4: CREATE USER uczestnik@localhost IDENTIFIED BY "Ucz123&";
+Zapytanie 5: GRANT SELECT, UPDATE ON chat.uczestnicy TO uczestnik@localhost;
+
+
+============================================================
+PLIK: kwerendy1.txt
+============================================================
+
+Zapytanie 1: INSERT INTO `logowanie`(`id`, `nick`, `haslo`) VALUES (3, 'Jeremi','Jer123'); 
+Zapytanie 2: SELECT FLOOR(AVG(rokUr)) AS "Średni rok urodzenia" FROM uczestnicy;
+Zapytanie 3: SELECT imie, nazwisko, nick, haslo FROM uczestnicy JOIN logowanie ON logowanie_id = logowanie.id WHERE imie LIKE "J%";
+Zapytanie 4: CREATE USER uczestnik@localhost IDENTIFIED BY "Ucz123&";
+Zapytanie 5: GRANT SELECT, UPDATE ON chat.uczestnicy TO uczestnik@localhost;
+
+
+============================================================
+PLIK: liczby_rzeczywiste.php
+============================================================
+
+<?php
+$a = 1.234;
+$b = 1.2e3;
+$c = 7E-10;
+$d = 1_234.567;
+
+
+echo "a = $a\n";
+echo "b = $b\n";
+echo "c = $c\n";
+echo "d = $d\n";
+?>
+
+
+
+============================================================
+PLIK: main(1).js
+============================================================
+
+const replies = [
+    "Hej, świetnie!",
+    "Nie mogę się doczekać!",
+    "Co jeszcze planujemy?",
+    "Może później?",
+    "Dobra decyzja!",
+    "Zgadza się.",
+    "Brzmi dobrze.",
+    "Ciekawy pomysł!",
+    "Spróbujmy!"
+];
+
+function sendMessage() {
+    const messageInput = document.getElementById('messageInput');
+    const messageText = messageInput.value;
+    const chat = document.querySelector('#chat');
+    const newMessage = document.createElement('div');
+    newMessage.classList.add('message', 'jolanta');
+    newMessage.innerHTML = "<img src='Jolka.jpg' alt='Jolanta Nowak'><p>" + messageText + "</p>";
+    chat.appendChild(newMessage);
+    newMessage.scrollIntoView();
+    messageInput.value = '';
+}
+
+function generateRandomReply() {
+    const randomIndex = Math.floor(Math.random() * replies.length);
+    const replyText = replies[randomIndex];
+    const chat = document.querySelector('#chat');
+    const newMessage = document.createElement('div');
+    newMessage.classList.add('message', 'krzysztof');
+    newMessage.innerHTML = "<img src='Krzysiek.jpg' alt='Krzysztof Łukasiński'><p>" + replyText + "</p>";
+    chat.appendChild(newMessage);
+    newMessage.scrollIntoView();
+}
+
+
+============================================================
+PLIK: modyfikatory dostępu.php
+============================================================
+
+<?php
+class Fruit {
+    public $name;
+    protected $color;
+    private $weight;
+}
+
+$mango = new Fruit();
+$mango->name = 'Mango';   // OK
+$mango->color = 'Yellow'; // ERROR
+$mango->weight = '300';   // ERROR
+?>
+
+
+
+============================================================
+PLIK: obiektowość.php
+============================================================
+
+<?php
+class Fruit {
+    //properties
+    public $name;
+    public $color;
+
+    //methods
+    function set_name($name) {
+        $this ->name = $name;
+    }
+    function get_name() {
+        return $this->name;
+    }
+}
+
+
+$apple = new Fruit();
+$banana = new Fruit();
+
+$apple->set_name('Apple');
+$banana->set_name('Banana');
+
+echo $apple->get_name();
+echo "<br>";
+echo $banana->get_name();
+?>
+
+
+
+============================================================
+PLIK: odczyt XML.php
+============================================================
+
+<?php
+$xml = simplexml_load_file("note.xml")
+    or die("Error: Cannot create object");
+
+print_r($xml);
+?>
+
+
+
+============================================================
+PLIK: odczytanie pliku.php
+============================================================
+
+<?php
+$myfile = fopen("webdictionary.txt", "r") 
+    or die("Unable to open file!");
+echo fread($myfile, filesize("webdictionary.txt"));
+fclose($myfile);
+?>
+
+
+
+============================================================
+PLIK: operator trójargumentowy.php
+============================================================
+
+<?php
+$liczba=10;
+$wynik=($liczba>=0)?"dodatnia":"ujemna";
+
+
+echo $wynik;
+?>
+
+
+
+============================================================
+PLIK: operatory przypisania.php
+============================================================
+
+<?php
+$a = 3; // assigment
+$b = &$a; // $b is a reference to $a
+
+
+print "$a\n";
+print "$b\n";
+
+
+$a = 4;
+
+
+print "$a\n";
+print "$b\n";
+?>
+
+
+
+============================================================
+PLIK: operatory.php
+============================================================
+
+<?php
+echo "<h3>Postincrement</h3";
+$a =5;
+echo "Should be 5:" . $a++ . "<br />\n";
+echo "Should be 6:" . $a . "<br />\n";
+
+
+echo "<h3>Preincrement</h3>";
+$a = 5;
+echo "Should be 6:" . ++$a . "<br />\n";
+echo "Should be 6:" . $a . "<br />\n";
+
+
+?>
+
+
+
+============================================================
+PLIK: plikcsv.php
+============================================================
+
+ <?php
+$plik = fopen("owoce.csv", "r");
+$wiersz = fgets($plik);
+$owoce = explode(";", $wiersz);
+
+
+foreach ($owoce as $owoc) {
+    echo $owoc . "<br>";
+}
+
+
+var_dump($owoce);
+?>
+
+
+
+============================================================
+PLIK: pobieranie danych z bazy danych mysql i generowanie listy html.txt
+============================================================
+
+<?php
+$sql = "SELECT id, firstname, lastname FROM MyGuests";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    echo "<ul>";
+    while ($row = mysqli_fetch_row($result)) {
+        echo "<li>" . $row[0] . ", " . $row[1] . ", " . $row[2] . "</li>";
+    }
+    echo "</ul>";
+} else {
+    echo "0 results";
+}
+?>
+
+
+
+============================================================
+PLIK: pobieranie przy użyciu klauzuli limit.txt
+============================================================
+
+<?php
+
+SELECT * FROM Orders LIMIT 30;
+SELECT * FROM Orders LIMIT 10 OFFSET 15;p
+
+?> 
+
+
+
+============================================================
+PLIK: print_if.php
+============================================================
+
+<?php
+$n = 43951789;
+
+
+// notice the double %% this prints a literal '%' character
+printf("%%d = %d\n", $n);   // standard integer representation
+printf("%%f = %f\n", $n);   // floating point representation
+printf("%%e = %e\n", $n);   // scientific notation
+printf("%%b = %b\n", $n);   // binary representation
+printf("%%o = %o\n", $n);   // octal representation
+printf("%%s = %s\n", $n);   // string representation
+printf("%%x = %x\n", $n);   // hexadecimal representation (lower-case)
+?>
+
+
+
+============================================================
+PLIK: przekazywanie referencji.php
+============================================================
+
+<?php
+function add_some_extra(&$string){
+    $string .= 'and something extra. ';
+
+}
+$str = "this is a string,";
+add_some_extra($str);
+echo $str;
+?>
+
+
+
+============================================================
+PLIK: przykładowy formularz.txt
+============================================================
+
+
+
+<?php
+// Ustawienia połączenia z bazą MySQL
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "moja_baza";
+
+
+// Nawiązanie połączenia
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+
+// Sprawdzenie połączenia
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+
+// Pobranie danych z formularza
+$name = $_POST['name'];
+$email = $_POST['email'];
+
+
+// Zapytanie SQL
+$sql = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
+
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+
+// Zamknięcie połączenia
+mysqli_close($conn);
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+
+
+$sql = "INSERT INTO MyGuests (firstname, email)
+        VALUES ('$name', '$email')";
+
+
+echo $sql;
+
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+?> 
+
+
+
+============================================================
+PLIK: pętla do while.php
+============================================================
+
+<?php
+$x = 1;
+
+do {
+    echo "The number is: $x <br>";
+    $x++;
+} while ($x <= 5);
+?>
+
+
+
+============================================================
+PLIK: pętla for.php
+============================================================
+
+<?php
+for ($x = 0; $x <= 5; $x++) {
+    echo "The number is: $x <br>";
+}
+?>
+
+
+
+============================================================
+PLIK: pętla foreach.php
+============================================================
+
+<?php
+$colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as $value) {
+    echo "$value <br>";
+}
+?>
+
+
+
+============================================================
+PLIK: pętla i break.php
+============================================================
+
+<?php
+for ( $i=0; $i<10; $i++){
+echo "liczba: $i <br>";
+if( $i ==5)
+break;
+}
+echo "koniec pętli";
+?>
+
+
+
+============================================================
+PLIK: pętla i continue.php
+============================================================
+
+<?php
+for ( $i=0; $i<10; $i++) {
+
+
+if( $i ==5)
+continue;
+echo "liczba: $i <br>";
+}
+echo "koniec pętli";
+?>
+
+
+
+============================================================
+PLIK: pętla.php
+============================================================
+
+<?php
+$x = 1;
+
+
+while($x <= 5) {
+    echo "the number is: $x <br>";
+    $x++; //increment
+}
+?>
+
+
+
+============================================================
+PLIK: referencja zmiennej funkcje.php
+============================================================
+
+<?php
+function add_some_extra(&$string){
+    $string .= 'and something extra. ';
+
+
+}
+$str = "this is a string,";
+add_some_extra($str);
+echo $str;
+?>
+
+
+
+============================================================
+PLIK: reg_GIF.php
+============================================================
+
+<?php
+$wzorzec = '/\S+\.gif/i';
+// i oznacza ignorowanie wielkości liter
+$tekst = "W pliku obrazek.gif jest ikona";
+if (preg_match($wzorzec, $tekst)) {
+    echo "znaleziono obrazek";
+}
+else {
+    echo "nie znaleziono obrazka";
+}
+?>
+
+
+
+============================================================
+PLIK: reg_email.php
+============================================================
+
+<?php
+// wyszukiwanie adresu email
+
+$wzorzec = '/[-\w.]+@([-\w]+\.)+[A-z]/';
+$tekst = "email: john@poczta.eu";
+
+if (preg_match($wzorzec, $tekst))
+    echo "znaleziono email";
+else
+    echo "nie znaleziono email";
+?>
+
+
+
+============================================================
+PLIK: reg_kod pocztowy.php
+============================================================
+
+<?php
+// wyszukiwanie kodu pocztowego
+$wzorzec = '/\d{2}-\d{3}/';
+$tekst = "poczta 34-200 Sucha Beskidzka";
+// $matches jest tablicą przechowująca znalezione dopasowania
+if (preg_match($wzorzec, $tekst, $matches)) {
+    echo "znaleziono kod pocztowy: " . $matches[0];
+}
+else {
+    echo "nie znaleziono kodu pocztowego";
+}
+?>
+
+
+
+============================================================
+PLIK: reg_www.php
+============================================================
+
+<?php
+// wyszukiwanie adresu www
+
+$wzorzec = '/(https?:\/\/[^\s]+|www\.[^\s]+)/i';
+$tekst = "strona: https://www.przyklad.pl";
+
+if (preg_match($wzorzec, $tekst))
+    echo "znaleziono adres www";
+else
+    echo "nie znaleziono adresu www";
+?>
+
+
+
+============================================================
+PLIK: return.php
+============================================================
+
+<?php
+function square($num){
+    return $num * $num;
+}
+echo square(4);
+?>
+
+
+
+============================================================
+PLIK: sesja.php
+============================================================
+
+<?php
+session_start();
+
+
+echo "Welcome to page #1<br>";
+
+
+$_SESSION['favcolor'] = 'yellow';
+$_SESSION['animal']   = 'dog';
+$_SESSION['time']     = time();
+
+
+echo '<a href="session2.php">Page 2</a>'; //Powoduje ona rozpoczęcie sesji i udostępnia super globalną tablicę $_session[]
+?>
+
+
+
+
+
+============================================================
+PLIK: sesja2.php
+============================================================
+
+<?php
+session_start();
+
+
+echo "Welcome to page #2<br>";
+
+
+echo "Ulubiony kolor: " . $_SESSION['favcolor'] . "<br>";
+echo "Ulubione zwierzę: " . $_SESSION['animal'] . "<br>";
+echo date('Y m d H:i:s', $_SESSION['time']) . "<br>";
+
+
+echo $_SESSION['bzdura'];
+?>
+
+
+
+
+============================================================
+PLIK: sortowanie tablic.php
+============================================================
+
+<?php
+$age = array("Peter" => "35", "Ben" => "37", "Joe" => "43");
+
+
+asort($age);  // ascending order according to value
+?>
+
+
+
+============================================================
+PLIK: sortowanie.php
+============================================================
+
+<?php
+$cars = array("Volvo", "BMW", "Toyota");
+sort($cars);
+echo "Size of array cars = " . count($cars);
+?>
+
+
+
+
+
+
+<?php
+$cars = array("Volvo", "BMW", "Toyota");
+rsort($cars);
+echo "Size of array cars = " . count($cars);
+?>
+
+
+
+============================================================
+PLIK: sprawdzenie czy plik istnieje.php
+============================================================
+
+<?php
+$myfile = fopen("aaa.txt","r")
+or die("unable to open the file");
+echo fread($myfile,filesize("aaa.txt"));
+fclose($myfile);
+?>
+
+
+
+============================================================
+PLIK: sql.php
+============================================================
+
+<?php
+$servername = "localhost";
+$username = "root"; // np. root
+$password = ""; // np. ""
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+echo "Connected successfully<br>";
+
+$database = "goetel";
+$sql = "CREATE DATABASE IF NOT EXISTS $database";
+
+// Tworzenie bazy danych
+if (mysqli_query($conn, $sql)) {
+    echo "Database created successfully<br>";
+} else {
+    echo "Error creating database: " . mysqli_error($conn) . "<br>";
+}
+
+// Wybór bazy danych
+if (mysqli_select_db($conn, $database)) {
+    echo "Database '$database' selected successfully<br>";
+} else {
+    echo "Error selecting database: " . mysqli_error($conn) . "<br>";
+}
+
+// Tworzenie tabeli (wykonujemy zanim zamkniemy połączenie)
+$sql = "CREATE TABLE IF NOT EXISTS MyGuests (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(30) NOT NULL,
+    lastname VARCHAR(30) NOT NULL,
+    email VARCHAR(50),
+    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)";
+
+if (mysqli_query($conn, $sql)) {
+    echo "Table MyGuests created successfully<br>";
+} else {
+    echo "Error creating table: " . mysqli_error($conn) . "<br>";
+}
+
+$sql = "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('John', 'Doe', 'john@example.com');";
+$sql .= "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('Mary', 'Moe', 'mary@example.com');";
+$sql .= "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('Julie', 'Dooley', 'julie@example.com');";
+
+if (mysqli_multi_query($conn, $sql)) {
+    echo "New records created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+
+// Zamknięcie połączenia (teraz na końcu)
+mysqli_close($conn);
+?>
+
+
+
+============================================================
+PLIK: str_length.php
+============================================================
+
+<?php
+echo strlen( "Hello World!"); //12
+echo strlen( "Łódź"); //7
+
+
+echo mb_strlen("Łódź"); //3
+
+
+echo str_world_count("Hello world!"); // 2
+?>
+
+
+
+============================================================
+PLIK: str_pos.php
+============================================================
+
+<?php
+$n = 43951789;
+
+
+// notice the double %% this prints a literal '%' character
+printf("%%d = %d\n", $n);   // standard integer representation
+printf("%%f = %f\n", $n);   // floating point representation
+printf("%%e = %e\n", $n);   // scientific notation
+printf("%%b = %b\n", $n);   // binary representation
+printf("%%o = %o\n", $n);   // octal representation
+printf("%%s = %s\n", $n);   // string representation
+printf("%%x = %x\n", $n);   // hexadecimal representation (lower-case)
+?>
+
+
+
+============================================================
+PLIK: str_replace.php
+============================================================
+
+<?php
+echo str_replace("world" , "Dolly", "Hello world")
+
+
+?>
+
+
+
+============================================================
+PLIK: switch.php
+============================================================
+
+<?php
+$favcolor ="red";
+
+
+switch ($favcolor) {
+case "red";
+    echo "your favorite color is red:"
+    break;
+case "blue":
+    echo "your favorite color is blue";
+    break;
+
+
+    default:
+    echo "your favorite color is neither red,blue,nor green!";
+   
+}
+?>
+
+
+
+============================================================
+PLIK: test.php
+============================================================
+
+<?php
+
+$filename = 'bitnami.css';
+
+if (file_exists($filename)){
+    echo "the file $filename exists";
+} else {
+    echo "the file $filename does not exist";
+}
+?>
+
+
+
+============================================================
+PLIK: tworzenie bazy działa.php
+============================================================
+
+<?php
+$servername = "localhost";
+$username = "root"; // np. root
+$password = ""; // np. ""
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+echo "Connected successfully<br>";
+
+$database = "goetel";
+$sql = "CREATE DATABASE IF NOT EXISTS $database";
+
+// Tworzenie bazy danych
+if (mysqli_query($conn, $sql)) {
+    echo "Database created successfully<br>";
+} else {
+    echo "Error creating database: " . mysqli_error($conn) . "<br>";
+}
+
+// Wybór bazy danych
+if (mysqli_select_db($conn, $database)) {
+    echo "Database '$database' selected successfully<br>";
+} else {
+    echo "Error selecting database: " . mysqli_error($conn) . "<br>";
+}
+
+// Zamknięcie połączenia
+mysqli_close($conn);
+?>
+
+
+
+============================================================
+PLIK: tworzenie bazy.php
+============================================================
+
+<?php
+$servername = "localhost";
+$username = "root"; // np. root
+$password = ""; // np. ""
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+echo "Connected successfully";
+
+
+$database = "goetel";
+$sql = "CREATE DATABASE $database";
+if (mysql_query($sql, $conn)) {
+    echo "Database created successfully";
+} else {
+    echo "Error creating database: " . mysql_error($conn);
+}
+
+
+?>
+
+
+
+============================================================
+PLIK: tworzenie ciasteczka.php
+============================================================
+
+<?Php
+$_COOKIE_name = "user";
+$_COOKIE_value = "John doe";
+$cookie_expire = time() + (24-60-60);
+setcookie($_COOKIE_name, $_COOKIE_value, $cookie_expire);
+?>
+
+
+
+============================================================
+PLIK: usuwanie danych.txt
+============================================================
+
+<?php
+$sql = "DELETE FROM MyGuests WHERE id=3";
+
+if (mysqli_query($conn, $sql)) {
+    echo "Record deleted successfully";
+} else {
+    echo "Error deleting record: " . mysqli_error($conn);
+}
+?> 
+
+
+
+============================================================
+PLIK: while.php
+============================================================
+
+<?php
+$x = 1;
+
+
+while($x <= 5) {
+    echo "the number is: $x <br>";
+    $x++; //increment
+}
+?>
+
+
+
+============================================================
+PLIK: wstawianie rekordu.php
+============================================================
+
+<?php
+// Wstawienie rekordu — wykonujemy zanim zamkniemy połączenie
+$sql = "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('John', 'Doe', 'john@example.com')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully<br>";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+?>
+
+
+
+============================================================
+PLIK: wstawianie wielu rekordów.php
+============================================================
+
+<?php
+$sql = "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('John', 'Doe', 'john@example.com');";
+$sql .= "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('Mary', 'Moe', 'mary@example.com');";
+$sql .= "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('Julie', 'Dooley', 'julie@example.com');";
+
+if (mysqli_multi_query($conn, $sql)) {
+    echo "New records created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+?>
+
+
+
+============================================================
+PLIK: wyrażenia regularne.php
+============================================================
+
+<?php
+
+
+$wyrazenie = "/być/";
+$tekst = "być albo nie być";
+
+
+if (preg_match($wyrazenie, $tekst))
+    echo("Znaleziono podany wzorzec.");
+else
+    echo("Nie znaleziono podanego wzorca.");
+?>
+
+
+
+============================================================
+PLIK: wyświetlenie ciasteczka.php
+============================================================
+
+<?php
+$cookie_name = "user";
+
+
+if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+} else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name];
+}
+?>
+
+
+
+============================================================
+PLIK: wzorzec wyszukiwania 5 cyfr.php
+============================================================
+
+<?php
+// Wzorzec wyszukujący dokładnie pięciu cyfr
+$wyrazenie = "/\d{5}/";
+$tekst = "telefon: 347208433";
+
+
+if (preg_match($wyrazenie, $tekst))
+    echo("Znaleziono podany wzorzec.");
+else
+    echo("Nie znaleziono podanego wzorca.");
+?>
+
+
+
+============================================================
+PLIK: wzorzec wyszukiwania.php
+============================================================
+
+<?php
+$wyrazenie = "/\d+/";
+$tekst = "abc123";
+
+
+if (preg_match($wyrazenie, $tekst))
+    echo("Znaleziono podany wzorzec.");
+else
+    echo("Nie znaleziono podanego wzorca.");
+?>
+
+
+
+============================================================
+PLIK: xml dane.php
+============================================================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>
+
+
+
+============================================================
+PLIK: zmienne.php
+============================================================
+
+<?php
+$number=5;
+echo "Variable value = $Number";
+?>
+
+
+
+============================================================
+PLIK: łączenie do servera sql.php
+============================================================
+
+<?php
+$servername = "localhost";
+$username = "root"; // np. root
+$password = ""; // np. ""
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+echo "Connected successfully";
+?>
+
+

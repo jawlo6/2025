@@ -1,0 +1,11 @@
+<p  style="color: blueviolet;">Dyanamieczne przypisanie funkcji obslugi zdarzenia do elementu HTML </p> 
+
+
+<button id="Mybutton">Wyświetl datę</button>
+<p id="demo"></p>
+<script>
+    document.querySelector("#myButton").onclick=displayDate;
+    function displayDate(){
+        document.querySelector("#demo").innerHTML=date();
+    }
+</script>

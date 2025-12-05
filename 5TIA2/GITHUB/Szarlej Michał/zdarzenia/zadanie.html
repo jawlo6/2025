@@ -1,0 +1,28 @@
+
+ <body>
+ <div id="test">
+
+     <button id="button">zmien kolor</button>
+ </div>
+
+ <p id="a">asdasd</p>
+</body>
+
+<style>
+    p{
+        color:green;
+    }
+</style>
+
+
+<script>
+    let button=document.querySelector("#button");
+    button.addEventListener("click",myFunction);
+
+
+    function myFunction(){
+        let a=document.querySelector("#a")
+        a.style.color="yellow"
+    }
+
+</script>

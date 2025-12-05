@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formatowanie Tekstu - Przykłady CSS</title>
+    <style>
+        /* CSS WBUDOWANY */
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+        h2 { border-bottom: 2px solid #555; padding-bottom: 5px; color: #333; margin-top: 30px; }
+        .przyklad { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; background-color: #fff; }
+        .opis { font-style: italic; color: #777; margin-bottom: 10px; } /* Nowy styl dla opisów */
+        
+        /* Właściwości CSS */
+        .kolor-nazwa { color: red; }
+        .kolor-hex { color: #34A853; }
+        .kolor-rgb { color: rgb(66, 133, 244); }
+        .kolor-rgba { color: rgba(250, 80, 130, 0.5); } 
+        
+        .align-lewo { text-align: left; }
+        .align-srodek { text-align: center; }
+        .align-prawo { text-align: right; }
+        .align-justuj { text-align: justify; border: 1px dashed #ccc; padding: 5px; } 
+
+        .ikona-srodek { vertical-align: middle; }
+        .indeks-gorny { vertical-align: super; font-size: 0.7em; }
+        .indeks-dolny { vertical-align: sub; font-size: 0.7em; }
+
+        .link-bez-kreski { text-decoration: none; }
+        .podkreslony { text-decoration: underline; }
+        .przekreslony { text-decoration: line-through; }
+        .dekor-fajny { text-decoration: underline wavy red 2px; }
+
+        .duze-litery { text-transform: uppercase; }
+        .male-litery { text-transform: lowercase; }
+        .kazde-slowo-duze { text-transform: capitalize; }
+
+        .odstep-litery { letter-spacing: 5px; }
+        .odstep-slowa { word-spacing: 15px; }
+        .duza-interlinia { line-height: 2.0; }
+        .wciecie-akapitu { text-indent: 50px; }
+
+        .cien-prosty { text-shadow: 2px 2px 5px grey; }
+        .cien-twardy { text-shadow: 4px 4px 0px black; }
+        .cien-obrys { 
+            color: white; 
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+        }
+        .cien-neon { 
+            color: #fff; 
+            background-color: #333;
+            padding: 5px;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00de, 0 0 30px #ff00de; 
+        }

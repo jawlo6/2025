@@ -1,0 +1,11 @@
+let container = document.createElement("div");
+let p = document.createElement("p");
+container.appendChild(p);
+
+let span = document.createElement("span");
+
+// Kluczowa linijka: wstaw span PRZED p
+p.before(span); 
+
+console.log(container.outerHTML);
+// Wynik w konsoli: "<div><span></span><p></p></div>"

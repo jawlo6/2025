@@ -1,0 +1,15 @@
+<script>
+    function zamiana() {
+        if( document.images[0].src.match("1.png")) {
+            document.images[0].src="2.png";
+            document.images[1].src="1.png";
+        } else {
+            document.images[0].src="1.png";
+            document.images[1].src="2.png";
+        }
+    }
+    setInterval( zamiana, 5000);
+</script>
+
+<img src="1.png" alt="Obrazek" width="300" height="200">
+<img src="2.png" alt="Obrazek" width="300" height="200">

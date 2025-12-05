@@ -1,0 +1,13 @@
+<script>
+    function myFunction() {
+        if( i<=10 ){
+            document.getElementById("akapit").innerHTML += i++ +"<br>";
+        }else{
+            document.getElementById("akapit").innerHTML="";
+            i=1;
+        }
+    }
+    let i=1;
+    setInterval(myFunction, 1000);
+</script>
+<p id="akapit"></p>

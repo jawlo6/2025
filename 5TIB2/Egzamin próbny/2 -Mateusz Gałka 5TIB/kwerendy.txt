@@ -1,0 +1,3 @@
+kw1 SELECT MIN(priorytet) FROM notatki WHERE  Osoby_id =3;
+kw2  SELECT nazwa , priorytet FROM notatki WHERE nazwa LIKE '%na%';
+kw3  SELECT imie , nazwa FROM osoby JOIN notatki ON osoby_id=notatki.osoby_id WHERE priorytet =5;

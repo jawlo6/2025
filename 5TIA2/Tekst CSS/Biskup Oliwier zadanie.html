@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Formatowanie tekstu</title>
+	<meta name="author" content="Oliwier Biskup 5TiA1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	/* Nie związane z zadaniem, tylko dla upiększenia */
+		body {
+			background-image: linear-gradient(to right, black, #111);
+			color: white;
+		}
+		.Flex {
+			display: flex;
+		}
+		.Flex1, .Flex2, .Flex3, .Flex4 {
+			margin: 15px;
+			width: 25%;
+		}
+
+	/* Klasy do formatowania tekstu - Kolory */
+		.CzerwonyRGB {
+			color: rgb(255,0,0);
+		}
+
+		.RozowyRGBA {
+			color: rgba(255,128,128,0.6);
+		}
+
+		.NiebieskiHEX {
+			color: #00ff00;
+		}
+
+		.ZielonyNazwa {
+			color: green;
+		}
+
+		.PomaranczowyHSL {
+			color: hsl(39, 100%, 50%);
+		}
+
+		.BrazowyHSLA {
+			color: hsla(30,100%,29%,0.7);
+		}
+	/* Wyrównanie poziome */
+		.DivWizualny {
+			background-color: #222;
+		}
+
+		.AlignLewy {
+			text-align: left;
+		}
+
+		.AlignSrodkowy {
+			text-align: center;
+		}
+
+		.AlignPrawy {
+			text-align: right;
+		}
+
+		.AlignJustify {
+			text-align: justify;
+		}
+
+	/* Wyrównanie pionowe */
+
+		.VerticalBaseline {
+			vertical-align: baseline;
+			font-size: small;
+			color: #55ff55;
+		}
+
+		.VerticalTextTop {
+			vertical-align: text-top;
+			font-size: small;
+			color: #55ff55;
+		}
+
+		.VerticalTextBottom {
+			vertical-align: text-bottom;
+			font-size: small;
+			color: #55ff55;
+		}
+
+		.VerticalSub {
+			vertical-align: sub;
+			font-size: small;
+			color: #55ff55;
+		}
+
+		.VerticalSuper {
+			vertical-align: super;
+			font-size: small;
+			color: #55ff55;
+		}
+
+	/* Decorator */
+
+		.TextOverline {
+			text-decoration: overline;
+		}
+
+		.TextLinethrough {
+			text-decoration: line-through;
+		}
+
+		.TextUnderline {
+			text-decoration: underline;
+		}
+
+		.TextSkrotowiec {
+			text-decoration: underline wavy blue 2px;
+		}
+
+	/* Transformacje */
+		/* W morde jeża, myślałem że chodzi o transformacje np. scale(), rotate(), matrix(), ile kodu musiałem usunąć :D */
+		.TranUppercase {
+			text-transform: uppercase;
+		}
+		
+		.TranLowercase {
+			text-transform: lowercase;
+		}
+
+		.TranCapitalize {
+			text-transform: capitalize;
+		}
+
+	/* Odstępy */
+
+		.MarginAuto {
+			margin: auto;
+		}
+
+		.MarginWszystkie {
+			margin: 4px;
+		}
+
+		.MarginLewyPrawy {
+			margin: 0 4px;
+		}
+
+		.MarginRozne {
+			margin: 2px 4px 6px 8px;
+		}
+
+		.PaddingWszystkie {
+			padding: 4px;
+		}
+
+		.PaddingLewyPrawy {
+			padding: 0 4px;
+		}
+
+		.PaddingRozne {
+			padding: 2px 4px 6px 8px;
+		}
+
+	/* Interlinia */
+
+		.InterNormal {
+			line-height: normal;
+		}
+
+		.InterDec {
+			line-height: 1.4;
+		}
+
+		.InterProcent {
+			line-height: 60%;
+		}
+	
+	/* Cienie */
+
+		.ShadowDeclaration {
+			color: green;
+		}
+
+		.ShadowTransform {
+			color: #f33;
+		}
+
+		.ShadowBlur {
+			color: #3f3;
+		}
+
+		.ShadowColor {
+			color: #33f;
+		}
+
+		.CienOstry {
+			text-shadow: 2px 2px red;
+		}
+
+		.CienRozmazany {
+			text-shadow: 2px 2px 2px red;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Przykłady formatowania tekstu</h1>
+	<div class="Flex">
+		<div class="Flex1">
+			<h2>Kolory</h2>
+				<p class="CzerwonyRGB">Tekst sformatowany RGB</p>
+				<p class="RozowyRGBA">Tekst sformatowany RGBA (przeźroczysty)</p>
+				<p class="NiebieskiHEX">Tekst sformatowany szesnastkowo</p>
+				<p class="ZielonyNazwa">Tekst sformatowany zdefiniowaną nazwą</p>
+				<p class="PomaranczowyHSL">Tekst sformatowany HSL</p>
+				<p class="BrazowyHSLA">Tekst sformatowany HSL (przeźroczysty)</p>
+			<h2>Wyrównanie poziome</h2>
+			<div class="DivWizualny">
+				<p class="AlignLewy">Wyrównane do lewej</p>
+				<p class="AlignSrodkowy">Wyrównane do środka</p>
+				<p class="AlignPrawy">Wyrównane do prawej</p>
+				<p class="AlignJustify">Wyrównanie "justify", każdy wyraz ma równy odstęp, najlepiej widać przy rozciąganiu okna</p>
+			</div>
+			<h2>Wyrównanie pionowe</h2>
+				<p>Tekst <span class="VerticalBaseline">Baseline</span>, domyślne</p>
+				<p>Tekst <span class="VerticalTextTop">text-top</span>, do góry</p>
+				<p>Tekst <span class="VerticalTextBottom">text-bottom</span>, do dołu</p>
+				<p>Tekst <span class="VerticalSub">sub</span>, indeks dolny</p>
+				<p>Tekst <span class="VerticalSuper">super</span>, indeks górny</p>
+		</div>
+		<div class="Flex2">
+			<h2>Decorator</h2>
+				<p class="TextOverline">Linia nad tekstem</p>
+				<p class="TextLinethrough">Przekreślona</p>
+				<p class="TextUnderline">podkreślenie</p>
+				<p>Istnieją osobne właściwości do kolorowania dekoratora (text-decoration-color, text-decoration-thickness, itd.), ale można to wszystko ustalić w samym <span class="TextSkrotowiec">text-decoration (patrz kod, klasa .TextSkrotowiec)</span>.</p>
+			<h2>Transformacje</h2>
+				<p class="TranUppercase">Duże litery</p>
+				<p class="TranLowercase">Małe litery</p>
+				<p class="TranCapitalize">"capitalize", pierwszą litere wyrazu zamienia na duże</p>
+		</div>
+		<div class="Flex3">
+			<h2>Odstępy (margin, padding)</h2>
+				<p>Najlepiej sprawdzić odstęp w narzędziach deweloperskich.</p>
+			<div class="DivWizualny">
+				<h3>Margines zewnętrzny (margin)</h3>
+					<p class="MarginAuto">Automatyczny, domyślny</p>
+					<p class="MarginWszystkie">Taki sam dla każdej strony</p>
+					<p class="MarginLewyPrawy">Tylko dla lewego i prawego boku</p>
+					<p class="MarginRozne">Margines rózny dla każdego</p>
+				<h3>Margines wewnętrzny (padding)</h3>
+					<p class="PaddingWszystkie">Wszystkie równe</p>
+					<p class="PaddingLewyPrawy">Tylko dla boków</p>
+					<p class="PaddingRozne">Różny dla każdego</p>
+			</div>
+			<h2>Interlinia (line-height)</h2>
+				<p class="InterNormal"><b>Zwykła interlinia, domyślna;</b> Sit ad alias corporis quae magni Exercitationem aut nulla libero provident ipsa Hic quidem commodi molestiae necessitatibus ducimus Odit doloribus fuga doloremque itaque dolorum iure aspernatur. Veritatis dolores deleniti reprehenderit.</p>
+				<p class="InterDec"><b>Interlinia 2;</b> Lorem dignissimos ratione tenetur obcaecati at Nesciunt debitis iste vel cumque magni. Consequuntur totam commodi ullam id cupiditate Iure quas nobis nostrum quia ipsam Neque aliquid eos maxime quasi sit</p>
+				<p class="InterProcent"><b>Interlinia 60%;</b> Sit ad beatae quo eos aliquam. Velit provident molestias rerum sequi rerum Nobis voluptatem atque nostrum fugiat veritatis Dolores corrupti hic ducimus inventore porro! Sunt et excepturi ad unde commodi!</p>
+		</div>
+		<div class="Flex4">
+			<h2>Cienie</h2>
+			<p><span class="ShadowDeclaration">text-shadow:</span> <span class="ShadowTransform">2px 2px</span> <span class="ShadowBlur">1px</span> <span class="ShadowColor">red</span></p>
+			<p class="ShadowTransform">Przesunięcie cienia w X i Y</p>
+			<p class="ShadowBlur">Rozmycie cienia</p>
+			<p class="ShadowColor">Kolor cienia</p>
+			
+			<h3>Przykład:</h3>
+			<p><span class="CienRozmazany">"Nie pytają cię o imię</span> <span class="CienOstry">walcząc z ostrym <b>cieniem</b> mgły..."</span></p>
+		</div>
+	</div>
+	<p style="text-align: right; font-size: small;">Przygotował Oliwier Biskup, 5TiA1</p>
+</body>
+</html>

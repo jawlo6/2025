@@ -1,0 +1,48 @@
+body {
+    font-family: Garamond;
+    text-align: center;
+    background-color: lavender;
+}
+
+header, footer {
+    background-color: #AF8EB5;
+    color: white;
+    padding: 10px;
+}
+
+.lewy,.srodkowy,.prawy {
+    background: #E1BEE7;
+    width: 30%;
+    height: 500px;
+    padding-top: 40px;
+    margin: 15px;
+    box-shadow: 10px 10px 10px DimGray;
+    float: left;
+}
+
+a {
+  color: Indigo;
+  font-size: 150%;
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none; 
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+  background-color: Indigo;
+  color: white;
+   text-decoration: underline;
+}
+.oba{
+    display: flex;
+}
+img,table {
+    border: 1px solid #000;
+    width: 80%;
+    margin: 40px;
+}
+
+footer {
+    clear: both;
+}

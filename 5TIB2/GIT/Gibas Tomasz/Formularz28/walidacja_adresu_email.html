@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Kontrola adresu mailowego</h3>
+
+    <form action="write2DB.php" method="post">
+        <label for="fname">Podaj adres E-Mail</label>
+        <input type="text" name="fname" id="mail">
+        <input type="submit" value="Wyślij" id="send">
+    </form>
+    <p id="wynik"></p>
+    <script>
+        document.querySelector("#send").addEventListener("click", checkMail);
+          function checkMail(event){
+            var mailText=document.querySelector("#mail").value;
+            var reg_email=/[\w-\.]+@([-A-z0-9]+\.)+[A-z0-9]/;
+            let position=mailText.search(reg_email);
+            document.querySelector("#wynik").innerHTML=position;
+            event.preventDefault();
+          }
+    </script>
+</body>
+</html>

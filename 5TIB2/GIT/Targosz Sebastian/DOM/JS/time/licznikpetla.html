@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Licznik 1–10</title>
+</head>
+<body>
+
+<h2>Aktualna liczba:</h2>
+<div id="wynik" style="font-size: 40px; font-weight: bold;"></div>
+
+<script>
+    let liczba = 1;
+
+    function licznik() {
+        document.getElementById("wynik").textContent = liczba;
+        
+        liczba++;
+
+        if (liczba > 10) {
+            liczba = 1; // reset po osiągnięciu 10
+        }
+    }
+
+    setInterval(licznik, 1000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+1. Kolor (color)
+<p style="color: red;">Ten tekst ma kolor czerwony.</p>
+
+Właściwość color określa kolor tekstu. Można używać nazw kolorów, wartości heksadecymalnych (#FF0000) lub zapisów RGB.
+
+ 2. Wyrównywanie (text-align)
+<p style="text-align: center;">Ten tekst jest wyśrodkowany.</p>
+
+Właściwość text-align określa sposób wyrównania tekstu w elemencie (np. left, center, right, justify). Najczęściej stosuje się ją w paragrafach, nagłówkach lub blokach tekstu.
+
+ 3. Wyrównanie pionowe (vertical-align)
+<span style="vertical-align: middle;">Tekst wyrównany pionowo do środka.</span>
+
+vertical-align używa się głównie w elementach inline lub komórkach tabeli. Pomaga ustawić tekst względem innych elementów w pionie (np. top, middle, bottom).
+
+ 4. Dekoratory (text-decoration)
+<p style="text-decoration: underline overline wavy blue;">Tekst z podkreśleniem i nadkreśleniem.</p>
+
+Właściwość text-decoration pozwala dodać podkreślenie, przekreślenie lub nadkreślenie. Można także ustawić styl linii (np. wavy, dotted) i jej kolor.
+
+ 5. Transformacje (text-transform)
+<p style="text-transform: uppercase;">Ten tekst został zamieniony na wielkie litery.</p>
+
+text-transform zmienia wygląd liter w tekście bez modyfikacji samego HTML-a. Dostępne wartości to m.in. uppercase, lowercase, capitalize.
+
+ 6. Odstępy (letter-spacing, word-spacing, line-height)
+<p style="letter-spacing: 3px; word-spacing: 10px; line-height: 1.8;">
+    Tekst z powiększonymi odstępami między literami, słowami i liniami.
+</p>
+
+Te właściwości pozwalają kontrolować odległości między znakami (letter-spacing), słowami (word-spacing) i liniami (line-height). Stosuje się je, by poprawić czytelność lub wygląd tekstu.
+
+ 7. Cienie (text-shadow)
+<p style="text-shadow: 2px 2px 5px gray;">Tekst z cieniem w kolorze szarym.</p>
+
+
+text-shadow dodaje cień do tekstu, określając przesunięcie poziome, pionowe, rozmycie i kolor. Efekt ten może nadać tekstowi głębię lub styl 3D.

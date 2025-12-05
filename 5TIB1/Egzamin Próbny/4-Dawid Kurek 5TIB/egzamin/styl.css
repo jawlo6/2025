@@ -1,0 +1,40 @@
+select{
+   font-family: Georgia;
+   font-style: white ;
+   }
+ .baner, .footer{
+    background-color: maroon;
+    padding-top: 2px;
+}
+ .lewy ,  .środkowy,  .prawy{
+     background-color: lightsalmon;
+     height: 527px;
+}
+.lewy, .prawy{
+ width: 15%;
+
+}
+ .środkowy{
+    width: 70%;
+}
+ .lewy , .prawy{
+    background-color: lightsalmon;
+    font-style: maroon;
+    font-size: 400%;
+    padd
+    padding-top: 210px;
+}
+.Miniatura{
+    height: 70px;
+    animation-duration: 4s; 
+    animation: step-start 
+    padding 50px    ;
+    animation: step-end
+    padding left 0px ;
+}
+.środkowy{
+    border-block: ;
+   padding-top: 45px;
+  
+
+}

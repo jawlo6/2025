@@ -1,0 +1,16 @@
+
+ 
+ <div id="t">
+     <button onclick="removeEvent()">wypisz imie</button>
+ </div>
+ <p id="c"></p>
+
+<script>
+    let button=document.querySelector("button");
+    button.addEventListener("click", myFunction);
+    function myFunction(){
+        document.querySelector("#c").innerHTML ="Krzysztof"
+    }
+</script>
+
+

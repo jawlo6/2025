@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang=pl>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proste działania</title>
+</head>
+<body>
+    <h1>PROSTE DZIAŁANIA</h1>
+    <p>Podaj pierwszą liczbę: <input type="number" id="pierwsza"></p>
+    <p>Podaj drugą liczbę: <input type="number" id="druga"></p>
+    <button id="suma">DODAWANIE</button>
+    <button id="roznica">ODEJMOWANIE</button>
+    <button id="iloczyn">MNOŻENIE</button>
+    <button id="iloraz">DZIELENIE</button>
+    <div id="wynik"></div></body><br>
+
+    <script>
+        const pierwsza = document.getElementById("pierwsza");
+        const druga = document.getElementById("druga");
+        const wynik = document.getElementById("wynik");
+        
+        document.getElementById("suma").onclick = function(){
+            if (pierwsza.value =="" || druga.value ==""){
+                alert('Podaj dwie zmienne!');
+                return;
+            }
+            wynik.textContent = "Wynik dodawania: " + (Number(pierwsza.value) + Number (druga.value))
+        }
+        document.getElementById("roznica").onclick = function(){
+                if (pierwsza.value =="" || druga.value ==""){
+                alert('Podaj dwie zmienne!');
+                return;
+            }
+            wynik.textContent = "Wynik odejmowania: " + (Number(pierwsza.value) - Number (druga.value))
+        }
+
+        document.getElementById("iloczyn").onclick = function(){
+                if (pierwsza.value =="" || druga.value ==""){
+                alert('Podaj dwie zmienne!');
+                return;
+            }
+            wynik.textContent = "Wynik mnożenia: " + (Number(pierwsza.value) * Number (druga.value))
+        }
+
+        document.getElementById("iloraz").onclick = function(){
+                if (pierwsza.value =="" || druga.value ==""){
+                alert('Podaj dwie zmienne!');
+                return;
+            }
+            if (druga.value == 0){
+                alert('Nie dzieli się przez liczbę 0!!!');
+                return;
+            }
+            wynik.textContent = "Wynik dzielenia: " + (Number(pierwsza.value) / Number (druga.value))
+        }
+    </script>
+</body>
+</html>

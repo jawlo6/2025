@@ -1,0 +1,13 @@
+<button id="myButton">Jestem przyciskiem</button>
+
+<script>
+    let akapit = document.createElement("p");
+    akapit.innerHTML = "Kacper Mętel"
+    document.querySelector("#myButton").addEventListener("click", funkcja);
+
+    function funkcja(){
+       document.querySelector("#myButton").after(akapit);
+        console.log(1);
+    }
+
+</script>

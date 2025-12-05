@@ -1,13 +1,15 @@
+<p>funkcja addEventListener() umożliwia dodanie kilku zdarzeń do elementu </p>
 <button id="myButton">Testuj</button>
+
 <p id="Demo"></p>
 <script>
     let button = document.querySelector("#myButton");
     button.addEventListener("mouseover", mover);
     button.addEventListener("click", mclick);
     function mover(){
-        document.querySelector("#Demo").innerHTML += "over <br>"
+        document.querySelector("#Demo").innerHTML += "over <br>";
     }
     function mclick(){
-        document.querySelector("#Demo").innerHTML += "click <br>"
+        document.querySelector("#Demo").innerHTML += "click <br>";
     }
 </script>

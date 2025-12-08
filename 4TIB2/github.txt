@@ -1,0 +1,4 @@
+Porządkowanie przykładów w repozytorium GITHUBa:
+1. Utwórz folder dla przykładów tematycznych, np: DOM, Events i tam zapisuj przykłady
+2. Nazwa pliku powinna być "wymowna"
+3. Wewnątrz pliku powinnien być krótki komentarz co dany przykład robi

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            border: 1px solid black; 
+            width: 500px; 
+            height: auto;
+        }
+        li{
+            margin: 5px;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        #vertical{
+            grid-template-columns: 25% 25% 25% 25%; 
+            height: 50px; 
+            border: 1px solid black;
+            display: grid;
+        }
+        #vertical>*{
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 100%;
+        }
+        #vertical>div>p>img{
+            height: 20px;
+            width: 20px;
+        }
+        #vertical>*>p{
+            margin: 0px;
+            font-size: 20px;
+        }
+        #Transform{
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            border: 1px solid black;
+        }
+        #Transform>div{
+            border: 1px solid black;
+            border-collapse: collapse;
+            height: 250px;
+        }
+        #Transform>div>p{
+            text-align: center;
+        }
+        #odstepy{
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            display: grid;
+        }
+    </style>
+</head>
+<body>
+    <h1>formatowanie tekstu</h1>
+    <br>
+    <hr>
+    <h3>Kolor</h3>
+    <p>funkcja "Color" - okresla kolor tekstu, a mozna go okreslic za pomoca:</p>
+    <ul>
+        <li style="color: rgb(255, 100, 100);">red green blue: rgb(255, 100, 100)</li>
+        <li style="color: aqua;">wartosci predefiniowanych: aqua</li>
+        <li style="color: #0000FF;">wartosci 16'stkowych: #0000FF</li>
+    </ul>
+    <hr>
+    <h3>text-align</h3>
+    <p>ustawia ułożenie się tekstu w pozomie</p>
+    <ul>
+        <li style="text-align: auto;">auto - automatycznie</li>
+        <li style="text-align: center;">center - na srodku</li>
+        <li style="text-align:end;">end - na koncu</li>
+        <li style="text-align:start ;">start - na samym początku</li>
+        <li style="text-align:left ;">left - po lewej stronie</li>
+        <li style="text-align:right;">right - po prawej stronie</li>
+        <li style="text-align: inherit;">inherit - odziedziczony po rodzicu</li>
+    </ul>
+    <hr>
+    <h3>vertical allign</h3>
+    <p>ustawia położenie tekstu wzgledem pionu</p>
+    <div id="vertical" >
+        <div><br><p>auto - automatycznie<img src="bloczek.png" style="vertical-align: auto;"></p> </div>
+        <div><br><p>baseline - na początku<img src="bloczek.png" style="vertical-align: baseline;"></p></div>
+        <div><br><p>sub - na dole<img src="bloczek.png" style="vertical-align: sub;"></p></div>
+        <div><br><p>sup - na górze<img src="bloczek.png" style="vertical-align: sup;"></p></div>
+    </div>
+    <hr>
+    <h3>text-decoration</h3>
+    <p>sluzy do dekoracji tekstu, glownie poprzez dodanie lini</p>
+    <ul>
+        
+        <li style="text-decoration:line-through ;"> line-through - przekreslona</li>
+        <li style="text-decoration:overline ;">     overline - nadkreslenie</li>  
+        <li style="text-decoration:underline ;">    underline - podkreslenie</li>
+        
+    </ul>
+    <p>oraz edycje tej lini:</p>
+    <ul>
+        <li style="text-decoration:dashed underline;">       dashed - pauzowana</li>
+        <li style="text-decoration:dotted underline;">       dotted - kropkowana</li>
+        <li style="text-decoration:double underline;">       double - podwojna</li>
+        <li style="text-decoration:solid underline;">        solid - ciagla (podstawowa)</li>
+        <li style="text-decoration:wavy underline;">         wavy - falowana</li>
+    </ul>
+
+    <hr>
+    <h3>Transform</h3>
+    <p>służy do zmiany tekstu</p>
+    <div id="Transform">
+        <div><p style="transform: translate(50px, 50px);">translate(50px, 50px) - przesuniecie o <br> 50px w prawo i w doł</p></div>
+        <div><p style="transform: rotate(25deg) translate(20px, 70px);">rotate(25deg) - obrocenie o 25*</p></div>
+        <div><p style="transform: scale(1.5,3)"><br>scale(1.5,3) - skalowanie x1.5 w boki <br> i x3 w wysokosci</p></div>
+        <div><p style="transform: skew(20deg, 20deg) ;"><br><br>skew(20deg, 20deg) - obrocenie w 2 osiach</p></div>
+        <div><p style="transform: matrix();">matrix(scaleX, skewY, skewX, scaleY, translateX, translateY) - wszystko powyzsze w 1 komendzie</p></div>
+    </div>
+    <p>Notatka - Wiekszość z powyższych ma też możliwość bycia użytym w 3D</p>
+    <hr>
+    <h3>Odstepy</h3>
+    <ul>
+        <li style="letter-spacing: 3px;">letter-spacing - jak daleko maja byc litery od siebie</li>
+        <li style="text-indent: 20px;">text-indent - akapit</li>
+        <li style="line-height: 1.5;">line-height <br>  odleglość między liniami</li>
+        <li style="white-space:initial;">white space - jak nadmiar tekstu w bloku ma się zachować</li>
+        <li style="word-spacing: 40px;">word-spacing - szerokość między wyrazami</li>
+    </ul>
+</body>
+</html>

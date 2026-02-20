@@ -1,0 +1,10 @@
+<h1>wstaw "span" za "p"</h1>
+<div id="test"><p>akapit</p> </div>
+<script>
+    let container = document.querySelector("#test");
+    let p = container.querySelector("p");
+    let span = document.createElement("span");
+    p.after(span);
+    console.log(container.outerHTML);
+    // "<div><p></p><span></span></div>"
+</script>

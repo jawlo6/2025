@@ -1,0 +1,15 @@
+{
+    "reviews": [
+        {
+            "id": 1,
+            "author": "John Doe",
+            "rating": 4,
+            "comment": "Great movie!"
+        },
+        {   "id": 2,
+            "author": "Jane Smith",
+            "rating": 5,
+            "comment": "Absolutely fantastic!"
+        }
+    ]
+}

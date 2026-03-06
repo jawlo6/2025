@@ -1,0 +1,14 @@
+<reviews>
+    <review>
+        <id>1</id>
+        <author>John Doe</author>
+        <rating>4</rating>
+        <comment>Great movie!</comment>
+    </review>
+    <review>
+        <id>2</id>
+        <author>Jane Smith</author>
+        <rating>5</rating>
+        <comment>Absolutely fantastic!</comment>
+    </review>
+</reviews>

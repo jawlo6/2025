@@ -1,8 +1,9 @@
-<h1>W "div" dodajemy "span" przed "p" </h1>
-
+<h1>W "div" dodajemy "p" i przed niego wstawiamy "span"</h1>
 <script>
+        // "<div></div>"
     let container = document.createElement("div");
     let p = document.createElement("p");
+    // "<div><p></p></div>"
     container.appendChild(p);
     let span = document.createElement("span");
     p.before(span);  // span wstawiamy przed p

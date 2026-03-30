@@ -1,0 +1,11 @@
+<h1>toggle() - uruchamia naprzemienne ukrywanie i wyświetlanie elementu, show() - wyświetla element </h1>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<button id="toggle">Przełącz akapit</button>
+<p id="akapit1">Pierwszy akapit</p>
+<script>
+    $( function(){ 
+        $( "#toggle" ).click( function() {
+            $( "#akapit1" ).toggle( 5000 );
+        } );
+    } );
+</script>

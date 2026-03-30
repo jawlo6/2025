@@ -1,0 +1,17 @@
+<h1>fadeIn() - wyświetlanie (przybliżanie) elementu </h1>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<button id="fadeIn">Wyświetl diva</button>
+<button id="fadeOut">Ukryj diva</button>
+<div style="width: 300; height: 300; 
+            background-color: red; display: none;" 
+            id="div1"></div>
+<script>
+    $( function(){ 
+        $( "#fadeIn" ).click( function() {
+            $( "#div1" ).fadeIn(  );
+        } );
+        $( "#fadeOut" ).click( function() {
+            $( "#div1" ).fadeOut(  );
+        } );
+    } );
+</script>

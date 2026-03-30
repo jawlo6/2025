@@ -1,0 +1,16 @@
+<h1>fadeToggle() - wyświetlanie i ukrywanieelementu </h1>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<button id="fadeToggle">fadeToggle</button>
+
+<div style="width: 300; height: 300; 
+            background-color: red; display: none;" 
+            id="div1"></div>
+<script>
+    $( function(){ 
+        $( "#fadeToggle" ).click( function() {
+            $( "#div1" ).fadeToggle(  );
+        } );
+        
+    } );
+</script>

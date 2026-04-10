@@ -1,0 +1,14 @@
+<h1>Dodanie zawartości funkcją before() i after()</h1>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $( function() {
+        $("button").click(function() {
+             $("p").before( "<b>before text</b>" );  
+             $("p").after( "<b>after text</b>" );  
+        });
+    });
+</script>
+
+<p>This is a paragraph. </p>
+<button>Dodaj teksty</button>

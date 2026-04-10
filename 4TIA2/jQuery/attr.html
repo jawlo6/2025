@@ -1,0 +1,13 @@
+<h1>Odczyt zawartości atrybutu funkcją attr()</h1>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $( function() {
+        $("button").click(function() {
+             alert( $("#link").attr( "href" ) );  
+        });
+    });
+</script>
+
+<a href="htps://w3schools.com" id="link">w3schools.com</a>
+<button>show "href" value</div>

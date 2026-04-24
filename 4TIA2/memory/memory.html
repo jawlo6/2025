@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <title>gra Memory</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>     
+<body>  
+    <h1>gra Memory</h1>
+    <div id="desktop">
+        <img id="img1" src="mem0c.png" alt="obrazek 1">
+        <img id="img2" src="mem0c.png" alt="obrazek 2">
+    </div>
+    <script>
+    let firstClick = false;
+    let firstImage = null;
+    let secondImage = null;
+    $( function() {
+        $("img").click(function() {
+            if (!firstClick) {  // Pierwszy klik
+                firstClick = true;
+                $(this).attr("src", "mem24.png");
+                firstImage = $(this);
+            }else { // drugi klik
+                firstClick = false;
+                $(this).attr("src", "mem0c.png");
+                secondImage = $(this);
+                console.log(firstImage.attr("src"), secondImage.attr("src"));
+                if (firstImage.attr("src") == secondImage.attr("src")) {         
+                        alert("Brawo! Znalazłeś parę!");
+                } else {
+                        alert("Niestety, to nie jest para. Spróbuj ponownie.");
+                }
+            }
+        });
+
+    });
+    </script>
+</body>     
+</html>

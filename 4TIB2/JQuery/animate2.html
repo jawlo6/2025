@@ -1,0 +1,15 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<h1>Animacja w bibliotece jQuery</h1>
+
+<button>start animacji</button>
+<div style="background-color: green;
+            height: 100px;
+            width: 100px; 
+            position: absolute"></div>
+<script>
+    $( function(){
+        $("button").click( function(){
+            $("div").animate({height: 'toggle'});
+        });
+    });
+</script>
